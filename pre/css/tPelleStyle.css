@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html												{ padding:0px; margin:0px; }
+
+body												{ padding:0px; margin:0px; background:#7e7971 url(../images/layout/imgBGHtml.jpg) top left repeat-x; }
+body												{ font-family:Tahoma, Geneva, sans-serif; font-size:11px; line-height:14px; color:#7e7971; }
+a													{ color:#666; text-decoration:none; }
+a:hover												{ color:#333; text-decoration:underline; }
+p													{ margin:0px; padding:2px 4px; }
+p#titles											{ font-size:14px; font-style:normal; color:#333; font-weight:bold; }
+p#txtBody											{ font-size:11px; font-style:normal; color:#555; }
+input												{ height:24px; padding:3px; background:#FFF; border:1px solid #7e7971; }
+textarea											{ height:80px; padding:3px; background:#FFF; border:1px solid #7e7971; }
+hr													{ color:#000; }
+
+
+/* LAYOUT */
+#mainCell											{ width:900px; margin:0px auto; }
+#headerCell											{ height:160px; background:url(../images/layout/imgHeader.jpg) top left no-repeat; padding:0px 320px; }
+#contentAreaCell									{ height:auto !important; min-height:610px; background:#f4f1ea; }
+#contentAreaCell div#pathNavCell					{ height:28px; background:#7E7A71; }
+#contentAreaCell div#pathNavCell div#snCell			{ width:auto; float:right; text-align:right; }
+#contentAreaCell div#pathNavCell span				{ color:#FFF; margin:0px; padding:0px; }
+#contentAreaCell div#pathNavCell div#titleColle		{ width:auto; height:16px; float:left; text-align:center; padding:6px 20px; background:#B1AC99; color:#FFF; }
+#contentAreaCell div#pathNavCell div#titleArtic		{ width:auto; height:16px; float:left; text-align:center; padding:6px 20px; color:#FFF; border-right:2px solid #F4F1EA; }
+#contentAreaCell div#mainFrame						{ height:auto !important; }
+
+#contentAreaCell div#mainFrame div#mlCell			{ width:720px; padding:10px; }
+#contentAreaCell div#mainFrame div#mrCell			{ width:140px; padding:10px; float:right; }
+
+#contentAreaCell div#sprtrCell						{ height:20px; background:#f4f1ea; }
+#contentAreaCell div#scndFrame						{ height:180px; }
+#contentAreaCell div#scndFrame div					{ float:left; }
+
+#contentAreaCell div#scndFrame div#slCell			{ width:580px; padding:10px; }
+#contentAreaCell div#scndFrame div#srCell			{ width:300px; }
+
+#footerCell											{ height:auto; padding:8px 0px; background:#7e7971; text-align:center; }
+#footerCell p#legal									{ color:#333; }
+#footerCell a										{ color:#555; font-size:9px; }
+#footerCell a:hover									{ color:#333; }
+
+
+/* MAIN MENU */
+#mainMenuCell										{ height:30px; padding:0px 100px; }
+#mainMenuCell *										{ margin:0px; padding:0px; }
+#mainMenuCell a										{ text-decoration:none; }
+#mainMenuCell ul									{ list-style:none; }
+#mainMenuCell p										{ padding:10px 0px; }
+/* LEVEL ONE */
+#mainMenuCell ul.dropdown							{ position:relative; z-index:50; }
+#mainMenuCell ul.dropdown li						{ width:140px; padding:0px 0px; text-align:center; font-weight:normal; float:left; background:#4F534D; }
+#mainMenuCell ul.dropdown a:hover					{ color:#FFF; }
+#mainMenuCell ul.dropdown a:active					{ color:#999; }
+#mainMenuCell ul.dropdown li a						{ display:block; padding:8px 0px; color:#AAA; }
+#mainMenuCell ul.dropdown li:last-child a			{ border-right: none; } /* Doesn't work in IE */
+#mainMenuCell ul.dropdown li.hover,
+#mainMenuCell ul.dropdown li:hover					{ background:#333; color:#FFF; position:relative; z-index:50; }
+#mainMenuCell ul.dropdown li.hover a				{ color: #000; }
+/* LEVEL TWO */
+#mainMenuCell ul.dropdown ul						{ width:180px; visibility:hidden; position:absolute; top:100%; left:0px; border:1px solid #000; }
+#mainMenuCell ul.dropdown ul li						{ width:180px; text-align:left; font-weight:normal; text-indent:8px; background:#666; color:#FFF; float:none; }
+#mainMenuCell ul.dropdown ul a:hover				{ font-size:11px; font-weight:bold; text-indent:16px; text-decoration:none; }
+/* IE 6 & 7 Needs Inline Block */
+#mainMenuCell ul.dropdown ul li a					{ border-right:none; width:100%; display:inline-block; }
+/* LEVEL THREE */
+#mainMenuCell ul.dropdown ul ul						{ left:100%; top:0px; width:160px; }
+#mainMenuCell ul.dropdown ul ul li					{ width:160px; }
+#mainMenuCell ul.dropdown li:hover > ul				{ visibility:visible; }
+
+
+/* MUESTRARIO DE COLOR */
+#contentAreaCell div#mainFrame div#colSamp			{ width:75px; float:left; margin:0px; padding:2px; }
+#contentAreaCell div#mainFrame img#imgMdC			{ float:left; margin:0px; }
+
+
+/* MARCAS NATURALES DE LA PIEL */
+#contentAreaCell div#mainFrame div div				{ width:320px; float:left; margin:4px; padding:6px; border-bottom:1px solid #CCC; }
+#contentAreaCell div#mainFrame img#imgCDLP			{ float:left; margin:0px 10px 0px 0px; }
+
+
+/* COLECCION */
+#contentAreaCell div#mainFrame div#coleCell			{ width:800px; }
+#contentAreaCell div#mainFrame div#prevLink			{ width:240px; float:left; margin:4px; padding:6px; border-bottom:2px solid #CCC; border-right:1px solid #CCC; }
+#contentAreaCell div#mainFrame div#prevLink:hover	{ background:#CCC; border-top:2px solid #AAA; border-left:1px solid #AAA; border-bottom:none; border-right:none; }
+#prevLink img										{ width:120px; float:left; margin:0px 8px 0px 0px; }
+#prevLink p											{ font-size:14px; font-weight:bold; margin:0px; }
+
+
+/* DESCRIPCION DE ARTICULO */
+#contentAreaCell div#mainFrame div#mlCell p#txtChar	{ width:320px; float:left; }

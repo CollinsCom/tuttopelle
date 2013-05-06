@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* IE */
+#mainMenuCell ul.dropdown ul li { display: inline; width: 100%; } 

@@ -1,0 +1,23 @@
+#slideshow {list-style:none; color:#fff; margin:0px; padding:0px;}
+#slideshow span {display:none}
+#wrapper {width:680px; display:none}
+#wrapper * {margin:0; padding:0}
+#fullsize {position:relative; width:680px; height:500px; }
+#information {position:absolute; bottom:0; width:680px; height:0; color:#fff; overflow:hidden; z-index:20; opacity:.7; filter:alpha(opacity=70)}
+#information h3 {display:none;}
+#information p {display:none;}
+#image {width:60px}
+#image img {position:absolute; z-index:10; width:auto}
+.imgnav {position:absolute; width:25%; height:306px; cursor:pointer; z-index:15}
+#imgprev {left:0; background:url(../images/left.gif) left center no-repeat}
+#imgnext {right:0; background:url(../images/right.gif) right center no-repeat}
+#imglink {position:absolute; height:306px; width:100%; z-index:10; opacity:.4; filter:alpha(opacity=40)}
+/*.linkhover {background:url(../images/link.gif) center center no-repeat}*/
+#thumbnails {margin:20px 0}
+#slideleft {float:left; width:20px; height:85px; background:url(../images/scroll-left_chico.gif) center center no-repeat;  }
+#slideleft:hover {}
+#slideright {float:right; width:20px; height:85px; background:url(../images/scroll-right_chico.gif) center center no-repeat; }
+#slideright:hover {}
+#slidearea {float:left; position:relative; width:635px; height:105px; overflow:hidden; margin-left:2px; background:#FFFFFF;}
+#slider {position:absolute; left:0; height:85px; background:#FFFFFF;}
+#slider img {cursor:pointer; border:1px solid #666; padding:1px}
