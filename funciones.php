@@ -12,7 +12,10 @@ function get_head($page,$titulo){
 <!doctype html>
 <html lang="es">
 	<head>
+		<meta name="description" content="Tutto Pelle es la &uacute;nica cadena mexicana especialista en muebles tapizados en 100% piel genuina. Confort y alta calidad que marca tendencia.">
+		<meta name="author" content="CollinsCom">
 		<meta charset="utf-8">
+		
 		<title><?php echo $titulo; ?></title>
 
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
@@ -130,7 +133,7 @@ function get_header(){
 function get_footer(){
 ?>
 			<footer>
-				<a href="http://www.collinscom.com" target="collins" style="position: absolute;right: 20px;bottom: 10px;">collinscom.com</a>
+				<!-- <a href="http://www.collinscom.com" target="collins" style="position: absolute;right: 20px;bottom: 10px;">collinscom.com</a> -->
 				<div>
 					<a href="https://www.facebook.com/TuttoPelleMx" target="facebook"><img src="images/fb.png" alt="facebook"></a>
 					<a href="https://twitter.com/tuttopellemx" target="twitter"><img src="images/tw.png" alt="twitter"></a>
@@ -138,7 +141,7 @@ function get_footer(){
 				</div>
 			</footer>
 		</div>
-
+	<?php analyticstracking(); ?>
 	</body>
 </html>
 <?php
@@ -217,6 +220,20 @@ function quienesSomos(){
 
 	echo '<div id="texto" bg="'.$seccion[imgFondo].'" style="width:'.($w-20).'px; height:'.($h-20).'px;" ><h1>'.$seccion[titulo].'</h1>'.$seccion[contenido].'</div>';
 
+}
+
+function analyticstracking(){
+?>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-40742823-1', 'tuttopelle.com.mx');
+	  ga('send', 'pageview');
+	</script>
+<?php
 }
 ?>
 

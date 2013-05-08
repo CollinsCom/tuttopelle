@@ -1,3 +1,6 @@
+color1 = #4d4d45
+color2 = #bababa
+
 *
 	color #ffffff
 	font-family "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
@@ -16,32 +19,36 @@ body
 	overflow hidden
 	background url(images/bg_transparencia.png)
 
+	form#fContacto
+		input
+			display block
+		
+		input[type="submit"], input[type="reset"]
+			display inline-block
+
 a, h3
 	color inherit
 
 li not(.ui-state-disabled):hover
-	color #4d4d45
+	color color1
 
 li
-	cursor hand
 	cursor pointer
+	cursor hand
 	float left
 	margin auto
 	padding 5px
 
-li after, li.quienesSomos after
+li:after, li.quienesSomos:after
 	content " |"
 	display inline
 
-li last-of-type after
+li:last-of-type:after
 	content ""
 
-li a
-	text-transform capitalize
-
 li h3
-	display inline
 	cursor pointer
+	display inline
 
 #wrap
 	min-height 100%
@@ -63,37 +70,37 @@ nav
 	z-index 100
 	// width 100%
 
-nav ul
-	height 20px
-	list-style-type none
-	margin-left 50px
-	padding 0px 5px 5px 0px
-	position relative
-	width 580px
-
-	li ul
-		background url("images/bg_transparencia.png")
-		left 10px
-		margin-left 0px
-		position absolute !important
-		top 26px
-		width auto
+	ul
+		height 20px
+		list-style-type none
+		margin-left 50px
+		padding 0px 5px 5px 0px
+		position relative
+		width 600px
 
 		li ul
+			background url("images/bg_transparencia.png")
+			left 10px
+			margin-left 0px
 			position absolute !important
-			top 25px
+			top 26px
+			width auto
 
-#salas first-letter, #sucursales first-letter, .quienesSomos first-letter
+			li ul
+				position absolute !important
+				top 25px
+
+#salas:first-letter, #sucursales:first-letter, .quienesSomos:first-letter
 	text-transform capitalize
 
-h3 first-letter
+h3:first-letter
 	text-transform capitalize
 
 
 a#logo
 	width 250px
 	height 0px
-	background #4d4d45
+	background color1
 	position absolute
 	top -50px
 	right 160px
@@ -195,27 +202,27 @@ div#vinetas
 	left 715px
 	width 200px
 
-#vinetas hgroup h1#nombreModelo
-	font-size 18px
-	text-transform uppercase
-	font-weight bold
+	hgroup h1#nombreModelo
+		font-size 18px
+		text-transform uppercase
+		font-weight bold
 
-#vinetas hgroup h2.estilo, div#estilos article div h2
-	font-size 12px
-	text-transform uppercase
+	hgroup h2.estilo, div#estilos article div h2
+		font-size 12px
+		text-transform uppercase
 
-#vinetas img
-	margin 0 auto
+	img
+		margin 0 auto
 
-#vinetas img#vineta
-	margin 20px auto 0 auto
+	img#vineta
+		margin 20px auto 0 auto
 
-#vinetas span
-	font-size 8px
-	width 200px
-	position absolute
-	bottom 60px
-	left 0px
+	span
+		font-size 0.85em
+		width 200px
+		position absolute
+		bottom 60px
+		left 0px
 
 #ft
 	bottom 30px
@@ -417,7 +424,10 @@ div#texto
 	top 0
 	width 8px
 
-#estilos
+div#estilos
+	h1
+		font-weight normal
+
 	.jspVerticalBar
 		right 50px
 
@@ -441,15 +451,15 @@ div#texto
 	float left
 
 .jspTrack
-	background url(css/images/bg_transparencia_0.4.png)
+	background rgba(186, 186, 186, 0.4)
 	position relative
 
 .jspDrag
 	-moz-border-radius 5px
 	-webkit-border-radius 5px
-	background #3d3d35
+	background color2
 	border-radius 5px
-	border 1px solid #4d4d45
+	border 1px solid color1
 	cursor pointer
 	left 0
 	position relative
@@ -462,7 +472,7 @@ div#texto
 	width 6px
 
 .jspArrow
-	background #4d4d45
+	background color1
 	cursor pointer
 	display block
 	text-indent -20000px

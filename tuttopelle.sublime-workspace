@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"ready",
+				"ready	document.ready - $(function()"
+			],
+			[
 				"margin",
 				"margin-left"
 			],
@@ -152,10 +168,6 @@
 				"last-child  (pseudo-class)"
 			],
 			[
-				"inl",
-				"inline"
-			],
-			[
 				"hi",
 				"hidden  (value)"
 			],
@@ -178,10 +190,6 @@
 			[
 				"margi",
 				"margin-left"
-			],
-			[
-				"in",
-				"inline"
 			],
 			[
 				"su",
@@ -375,7 +383,7 @@
 			"file": "funciones.php",
 			"settings":
 			{
-				"buffer_size": 8213,
+				"buffer_size": 9193,
 				"line_ending": "Unix"
 			}
 		},
@@ -388,18 +396,10 @@
 			}
 		},
 		{
-			"file": "jorgerojas.php",
+			"file": "contacto.php",
 			"settings":
 			{
-				"buffer_size": 2116,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "quienes-somos.php",
-			"settings":
-			{
-				"buffer_size": 2042,
+				"buffer_size": 4739,
 				"line_ending": "Unix"
 			}
 		},
@@ -407,7 +407,7 @@
 			"file": "js/libs.js",
 			"settings":
 			{
-				"buffer_size": 7871,
+				"buffer_size": 8559,
 				"line_ending": "Unix"
 			}
 		},
@@ -420,18 +420,10 @@
 			}
 		},
 		{
-			"file": "/Applications/XAMPP/xamppfiles/htdocs/template/index.html",
-			"settings":
-			{
-				"buffer_size": 1343,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 6747,
+				"buffer_size": 7393,
 				"line_ending": "Unix"
 			}
 		},
@@ -439,8 +431,32 @@
 			"file": "css/style.styl",
 			"settings":
 			{
-				"buffer_size": 7406,
+				"buffer_size": 7300,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/jquery-ui-1.10.1.custom.js",
+			"settings":
+			{
+				"buffer_size": 434342,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "conexion.php",
+			"settings":
+			{
+				"buffer_size": 790,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sftp-config.json",
+			"settings":
+			{
+				"buffer_size": 1286,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -450,37 +466,25 @@
 				"buffer_size": 47754,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "conexion.php",
-			"settings":
-			{
-				"buffer_size": 778,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "contacto.php",
-			"settings":
-			{
-				"buffer_size": 3536,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 159.0,
 		"selected_items":
 		[
 			[
-				"pack",
-				"Package Control: List Packages"
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"git",
-				"Git: Init"
+				"Git: Commit history"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
 			],
 			[
 				"git in",
@@ -528,10 +532,6 @@
 			],
 			[
 				"inst",
-				"Package Control: Install Package"
-			],
-			[
-				"insta",
 				"Package Control: Install Package"
 			],
 			[
@@ -668,6 +668,19 @@
 	},
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/simtraveler/sftp-config.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/googleb0b6c8922dd69254.html",
+		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/User/SFTP.errors.log",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/validate.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.jscrollpane.js",
+		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/README.md",
+		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/SideBarGit/SideBarGit.sublime-settings",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.mousewheel.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.fancybox.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/jorgerojas.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/template/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/quienes-somos.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/sucursal.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/sftp-config.json",
 		"/Volumes/JR 16GB/WEB TUTTO PELLE/libs.js",
@@ -675,12 +688,8 @@
 		"/Volumes/JR 16GB/WEB TUTTO PELLE/funciones.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/template/css/main.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/images/bg_footer.png",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.mousewheel.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.jscrollpane.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.fancybox.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/jquery.jscrollpane.codrops1.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/style.css",
-		"/Applications/XAMPP/xamppfiles/htdocs/simtraveler/sftp-config.json",
 		"/Applications/XAMPP/xamppfiles/htdocs/simtraveler/js/jquery.mousewheel.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/simtraveler/js/lib.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/coleccion.php",
@@ -696,7 +705,7 @@
 	],
 	"find":
 	{
-		"height": 66.0
+		"height": 51.0
 	},
 	"find_in_files":
 	{
@@ -765,6 +774,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hoverintent",
+			"click hoverintent",
+			"collins",
+			"h1",
+			"estilos",
+			"url(\"images/bg_transparencia",
+			"#bababa",
+			"#4d4d45",
+			"analytics",
+			" ",
+			"after",
+			" first-letter",
+			"size",
+			"jsptra",
+			"jspdr",
+			"li",
+			"bg_transparencia_0.4.png",
+			"h1",
+			"jspPane",
+			"thumb",
+			"contenedor",
+			"coleccion",
+			"  ",
+			"hover",
+			" hover",
+			"hover",
+			"mousewheel",
+			":",
 			"top",
 			"fondo",
 			"nav",
@@ -864,35 +901,7 @@
 			"alert",
 			"showLoading",
 			"loading",
-			"current",
-			"loading",
-			"unbind",
-			"hideLoading",
-			"fancybox-loading",
-			"loading",
-			"F",
-			"showLoading",
-			"loading",
-			"fancybox_loading",
-			"_collins",
-			"quienesSomos",
-			"hover",
-			"h3",
-			"coleccion",
-			"fade",
-			"show",
-			"hide",
-			"h1",
-			"java",
-			"p",
-			"bg",
-			"h3",
-			"a",
-			"h3",
-			"hover",
-			"color",
-			"hover",
-			"link"
+			"current"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -900,6 +909,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			"color2",
+			"color1",
+			"",
+			":first-letter",
+			" ",
+			":hover",
+			" ",
 			"#3d3d35",
 			"url(images/bg_transparencia_0.4.png)",
 			"url(css/images/bg_transparencia_0.4.png)",
@@ -1020,14 +1036,7 @@
 			"garantía ",
 			"Garantía ",
 			"- [A-Z+]",
-			"- [:upper:]",
-			"- $1[:upper:]",
-			"TTuboplus tuberia sanitaria",
-			"Tuboplus tuberia hidráulica",
-			"No se oxidan ni se corroen.",
-			"del 20% y",
-			"opcion",
-			"Características"
+			"- [:upper:]"
 		],
 		"reverse": false,
 		"show_context": false,
@@ -1038,7 +1047,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -1046,7 +1055,7 @@
 					"file": "funciones.php",
 					"settings":
 					{
-						"buffer_size": 8213,
+						"buffer_size": 9193,
 						"regions":
 						{
 							"bookmarks":
@@ -1056,24 +1065,24 @@
 								"regions":
 								[
 									[
-										3715,
-										3715
+										3947,
+										3947
 									],
 									[
-										4569,
-										4569
+										4801,
+										4801
 									],
 									[
-										5920,
-										5920
+										6191,
+										6191
 									],
 									[
-										7759,
-										7759
+										8268,
+										8268
 									],
 									[
-										8208,
-										8208
+										8749,
+										8749
 									]
 								],
 								"scope": "bookmarks"
@@ -1082,8 +1091,8 @@
 						"selection":
 						[
 							[
-								3170,
-								3170
+								5347,
+								5347
 							]
 						],
 						"settings":
@@ -1095,7 +1104,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1460.0,
+						"translation.y": 2411.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1145,49 +1154,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "jorgerojas.php",
+					"file": "contacto.php",
 					"settings":
 					{
-						"buffer_size": 2116,
+						"buffer_size": 4739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1731,
-								1731
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "quienes-somos.php",
-					"settings":
-					{
-						"buffer_size": 2042,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								408,
-								454
+								4552,
+								4552
 							]
 						],
 						"settings":
@@ -1199,17 +1177,17 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 55.0,
+						"translation.y": 2257.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "js/libs.js",
 					"settings":
 					{
-						"buffer_size": 7871,
+						"buffer_size": 8559,
 						"regions":
 						{
 							"bookmarks":
@@ -1219,16 +1197,16 @@
 								"regions":
 								[
 									[
-										1251,
-										1251
+										1146,
+										1146
 									],
 									[
-										4724,
-										4724
+										3669,
+										3669
 									],
 									[
-										6086,
-										6086
+										5081,
+										5081
 									]
 								],
 								"scope": "bookmarks"
@@ -1237,8 +1215,8 @@
 						"selection":
 						[
 							[
-								2063,
-								1831
+								6866,
+								6866
 							]
 						],
 						"settings":
@@ -1251,13 +1229,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1393.0,
+						"translation.y": 4625.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "estilos.php",
 					"settings":
 					{
@@ -1268,8 +1246,8 @@
 						"selection":
 						[
 							[
-								948,
-								948
+								1479,
+								1479
 							]
 						],
 						"settings":
@@ -1281,56 +1259,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 162.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/Applications/XAMPP/xamppfiles/htdocs/template/index.html",
-					"settings":
-					{
-						"buffer_size": 1343,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								310,
-								258
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
+					"buffer": 5,
 					"file": "css/style.css",
 					"settings":
 					{
-						"buffer_size": 6747,
+						"buffer_size": 7393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								669,
-								669
+								6423,
+								6423
 							]
 						],
 						"settings":
@@ -1342,25 +1289,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 29.0,
+						"translation.y": 1290.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 6,
 					"file": "css/style.styl",
 					"settings":
 					{
-						"buffer_size": 7406,
+						"buffer_size": 7300,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1455,
-								1455
+								1413,
+								1413
 							]
 						],
 						"settings":
@@ -1373,7 +1320,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1227.0,
+						"translation.y": 1328.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1389,7 +1336,7 @@
 					"file": "funciones.php",
 					"settings":
 					{
-						"buffer_size": 8213,
+						"buffer_size": 9193,
 						"regions":
 						{
 							"bookmarks":
@@ -1405,8 +1352,8 @@
 						"selection":
 						[
 							[
-								5598,
-								5598
+								7148,
+								7148
 							]
 						],
 						"settings":
@@ -1418,25 +1365,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2313.0,
+						"translation.y": 4202.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "js/jquery.fancybox.js",
+					"buffer": 7,
+					"file": "js/jquery-ui-1.10.1.custom.js",
 					"settings":
 					{
-						"buffer_size": 47754,
+						"buffer_size": 434342,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4728,
-								4728
+								46940,
+								46940
 							]
 						],
 						"settings":
@@ -1448,25 +1395,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3251.0,
+						"translation.y": 282969.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 8,
 					"file": "conexion.php",
 					"settings":
 					{
-						"buffer_size": 778,
+						"buffer_size": 790,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								197,
-								197
+								388,
+								229
 							]
 						],
 						"settings":
@@ -1478,25 +1425,56 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 55.0,
+						"translation.y": 239.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 9,
+					"file": "sftp-config.json",
+					"settings":
+					{
+						"buffer_size": 1286,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								846,
+								846
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 226.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "contacto.php",
 					"settings":
 					{
-						"buffer_size": 3536,
+						"buffer_size": 4739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2026,
-								2026
+								4240,
+								4240
 							]
 						],
 						"settings":
@@ -1507,26 +1485,26 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 684.0,
+						"translation.x": 160.0,
+						"translation.y": 2249.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "js/libs.js",
 					"settings":
 					{
-						"buffer_size": 7871,
+						"buffer_size": 8559,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7138,
-								7138
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1539,7 +1517,37 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4350.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "js/jquery.fancybox.js",
+					"settings":
+					{
+						"buffer_size": 47754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1635,
+								1654
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1234.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1580,7 +1588,7 @@
 		"rows":
 		[
 			0.0,
-			0.615746758633,
+			0.597485826804,
 			1.0
 		]
 	},
@@ -1595,7 +1603,7 @@
 	},
 	"output.sftp":
 	{
-		"height": 79.0
+		"height": 108.0
 	},
 	"output.unsaved_changes":
 	{
@@ -1865,7 +1873,7 @@
 		[
 			[
 				"",
-				"/Applications/XAMPP/xamppfiles/htdocs/galerias/galerias.sublime-project"
+				"/Applications/XAMPP/xamppfiles/htdocs/hanson/hanson.sublime-project"
 			]
 		],
 		"width": 380.0

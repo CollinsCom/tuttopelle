@@ -19,15 +19,17 @@ $theArticle=$_POST['theArticle'];
 if ( $_POST['sendMail'] == 'Enviar' ){
 	// mail ("contacto@collinscom.com", "Contacto Tutto Pelle", "From: $theMail");
 	mail ("jorge.rojas@collinscom.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
-	mail ("sandra.delrio@tuttopelle.com.mx", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
-	mail ("alberto.garibai@tuttopelle.com.mx", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");	
+	// mail ("sandra.delrio@tuttopelle.com.mx", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
+	// mail ("alberto.garibai@tuttopelle.com.mx", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");	
 
 	//	mail ("hugo@collinscom.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
 	echo "<script>parent.$.fancybox.close()</script>";
 }
 
 ?>
-<script type="text/javascript" src="css/style.css"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 <style>
 *{
 	color: #ffffff;
@@ -51,7 +53,62 @@ h2{
 p{
 	padding-left: 10px;
 }
+label.error{
+	display: inline-block;
+	color: #bababa;
+}
+label.error:before{
+	content: "*";
+	color: red;
+}
 </style>
+<script type="text/javascript">
+$(function() {
+	$('#sendMail').click(function(){
+		$('#fContacto').validate({
+			rules:{
+				theName:{
+					required:true
+				},
+				theCity:{
+					required:true
+				},
+				thePhone:{
+					number: true,
+					rangelength: [7, 10]
+				},
+				theMail:{
+					required: true,
+					email: true
+				},
+				theComment:{
+					required: true
+				}
+			},
+			messages:{
+				theName:{
+					required:"¿Cuál es tu nombre?"
+				},
+				theCity:{
+					required:"¿De donde nos visitas?"
+				},
+				thePhone:{
+					number: "Tu telefono deben ser solo numeros.",
+					rangelength: "El telefono debe tener entre 7 y 10 digitos"
+				},
+				theMail:{
+					required: "¿Algun correo para contactarte?",
+					email: "No es un correo valido."
+				},
+				theComment:{
+					required: "¿Qué nos quieres compartir?"
+				}
+			}
+		});
+	});
+});
+
+</script>
 <body style="padding: 15px; background-image: url(http://sitios.collinscom.com/tuttopelle/css/images/bg_transparencia.png);">
 	<div id="mainFrame">
 		<div id="mlCell">

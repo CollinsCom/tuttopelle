@@ -8,10 +8,10 @@ function conectar(){
 	define ('DB_NAME', 'tutto_pelle');
 
 	//datos servidor tutto pelle
-	define ( "SERVER", 'localhost' );
-	define ( "DB_NAME", 'tuttoPelle2011' );
-	define ( "DB_USER", 'tuttoPelle' );
-	define ( "DB_PWD", 'admDB2011' );
+	// define ( "SERVER", 'localhost' );
+	// define ( "DB_NAME", 'tuttoPelle2011' );
+	// define ( "DB_USER", 'tuttoPelle' );
+	// define ( "DB_PWD", 'admDB2011' );
 
 	$link = @mysql_connect (DB_HOST, DB_USER, DB_PASSWORD) OR die ('Could not connect to MySQL: ' . mysql_error() );
 	@mysql_select_db (DB_NAME) OR die ('Could not select the database: ' . mysql_error() );

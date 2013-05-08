@@ -1,10 +1,12 @@
 $(document).ready(function() {
+	imgResize(".bg");
 	$('nav').delay(500).fadeIn(1000);
 	$('a#logo').delay(1000).animate({
 		height: '200px'
 	}, 500, function() {});
 
 	$("nav ul").accordion({
+		event: "click hoverintent",
 		heightStyle: "content",
 		collapsible: true,
 		active: false
@@ -93,12 +95,13 @@ $(document).ready(function() {
 	$("a.contacto").fancybox({
 		maxWidth: 600,
 		minWidth: 600,
-		maxHeight: 350,
-		minHeight: 350,
+		maxHeight: 385,
+		minHeight: 385,
 		fitToView: true,
 		width: 600,
-		height: 350,
+		height: 385,
 		autoSize: false,
+		autoResize  : true,
 		openEffect: 'fade',
 		closeEffect: 'fade',
 		top: 160,
@@ -225,9 +228,9 @@ $(document).ready(function() {
 });
 
 
-// cambiar tamaño de fondo dependiento dlel tamaño de la pantalla
-$(window).resize(function() {	
-	var winW = $(window).width();	
+//cambiar tamaño de fondo dependiento dlel tamaño de la pantalla
+function imgResize(selector){
+ var winW = $(window).width();	
 	var winH = $(window).height();	
 	var marginH = 0;	
 	var marginW = 0;	
@@ -242,11 +245,75 @@ $(window).resize(function() {
 		h = (winW/16)*9;		
 		marginH=(h-winH)/2;				
 	}
-	$(".bg").css({
+	$(selector).css({
 		"width" : function() {return w;},
 		"height"  : function() {return h;},
 		"margin" : function() {			
 			return "-"+marginH+"px -"+marginW+"px";
 		}
-	});				
-});
+	});
+}
+
+$(window).resize(function(){imgResize(".bg");});
+
+// hoverintent
+$.event.special.hoverintent = {
+    setup: function() {
+      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    teardown: function() {
+      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    handler: function( event ) {
+      var currentX, currentY, timeout,
+        args = arguments,
+        target = $( event.target ),
+        previousX = event.pageX,
+        previousY = event.pageY;
+ 
+      function track( event ) {
+        currentX = event.pageX;
+        currentY = event.pageY;
+      };
+ 
+      function clear() {
+        target
+          .unbind( "mousemove", track )
+          .unbind( "mouseout", clear );
+        clearTimeout( timeout );
+      }
+ 
+      function handler() {
+        var prop,
+          orig = event;
+ 
+        if ( ( Math.abs( previousX - currentX ) +
+            Math.abs( previousY - currentY ) ) < 7 ) {
+          clear();
+ 
+          event = $.Event( "hoverintent" );
+          for ( prop in orig ) {
+            if ( !( prop in event ) ) {
+              event[ prop ] = orig[ prop ];
+            }
+          }
+          // Prevent accessing the original event since the new event
+          // is fired asynchronously and the old event is no longer
+          // usable (#6028)
+          delete event.originalEvent;
+ 
+          target.trigger( event );
+        } else {
+          previousX = currentX;
+          previousY = currentY;
+          timeout = setTimeout( handler, 100 );
+        }
+      }
+ 
+      timeout = setTimeout( handler, 100 );
+      target.bind({
+        mousemove: track,
+        mouseout: clear
+      });
+    }
+  };

@@ -1,20 +1,21 @@
 *{color:#fff;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:11px;letter-spacing:1px;text-decoration:none;-webkit-text-size-adjust:none;outline:none !important}
-body{color:#fff;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:13px;letter-spacing:1px;text-decoration:none;overflow:hidden;background:url("images/bg_transparencia.png")}
+body{color:#fff;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:13px;letter-spacing:1px;text-decoration:none;overflow:hidden;background:url("images/bg_transparencia.png");}
+body form#fContacto input{display:block}
+body form#fContacto input[type="submit"],body form#fContacto input[type="reset"]{display:inline-block}
 a,h3{color:inherit}
 li not(.ui-state-disabled):hover{color:#4d4d45}
-li{cursor:hand;cursor:pointer;float:left;margin:auto;padding:5px}
-li after,li.quienesSomos after{content:" |";display:inline}
-li last-of-type after{content:""}
-li a{text-transform:capitalize}
-li h3{display:inline;cursor:pointer}
+li{cursor:pointer;cursor:hand;float:left;margin:auto;padding:5px}
+li:after,li.quienesSomos:after{content:" |";display:inline}
+li:last-of-type:after{content:""}
+li h3{cursor:pointer;display:inline}
 #wrap{min-height:100%}
 header{height:100px;background:url("images/deg_top.png") repeat-x 0 0;-webkit-background-size:auto 100%;-moz-background-size:auto 100%;background-size:auto 100%;z-index:9010}
-nav{background:url("images/bg_transparencia.png");display:none;position:absolute;top:20px;z-index:100}
-nav ul{height:20px;list-style-type:none;margin-left:50px;padding:0 5px 5px 0;position:relative;width:580px;}
+nav{background:url("images/bg_transparencia.png");display:none;position:absolute;top:20px;z-index:100;}
+nav ul{height:20px;list-style-type:none;margin-left:50px;padding:0 5px 5px 0;position:relative;width:600px;}
 nav ul li ul{background:url("images/bg_transparencia.png");left:10px;margin-left:0;position:absolute !important;top:26px;width:auto;}
 nav ul li ul li ul{position:absolute !important;top:25px}
-#salas first-letter,#sucursales first-letter,.quienesSomos first-letter{text-transform:capitalize}
-h3 first-letter{text-transform:capitalize}
+#salas:first-letter,#sucursales:first-letter,.quienesSomos:first-letter{text-transform:capitalize}
+h3:first-letter{text-transform:capitalize}
 a#logo{width:250px;height:0;background:#4d4d45;position:absolute;top:-50px;right:160px;overflow:hidden}
 img#logo-t{width:250px;height:auto;margin-top:110px}
 li ul{text-align:left;margin-top:10px 9;margin-left:-80px 9}
@@ -31,12 +32,12 @@ div#thumb .contenedor .jspContainer .jspPane{padding:0 !important}
 div.contenedor{position:relative;top:0;height:400px}
 p#mas{position:absolute;top:420px;left:45px;cursor:hand}
 p#regresar{padding-left:30px;background:url("../images/flecha_reg_w.png") 0 50% no-repeat;background-size:auto 12px;cursor:hand;cursor:pointer;position:absolute;top:445px;left:25px;z-index:900}
-div#vinetas{display:inline-block;height:420px;margin:0 0 0 20px;overflow:hidden;position:absolute;top:15px;left:715px;width:200px}
-#vinetas hgroup h1#nombreModelo{font-size:18px;text-transform:uppercase;font-weight:bold}
-#vinetas hgroup h2.estilo,div#estilos article div h2{font-size:12px;text-transform:uppercase}
-#vinetas img{margin:0 auto}
-#vinetas img#vineta{margin:20px auto 0 auto}
-#vinetas span{font-size:8px;width:200px;position:absolute;bottom:60px;left:0}
+div#vinetas{display:inline-block;height:420px;margin:0 0 0 20px;overflow:hidden;position:absolute;top:15px;left:715px;width:200px;}
+div#vinetas hgroup h1#nombreModelo{font-size:18px;text-transform:uppercase;font-weight:bold}
+div#vinetas hgroup h2.estilo,div#vinetas div#estilos article div h2{font-size:12px;text-transform:uppercase}
+div#vinetas img{margin:0 auto}
+div#vinetas img#vineta{margin:20px auto 0 auto}
+div#vinetas span{font-size:.85em;width:200px;position:absolute;bottom:60px;left:0}
 #ft{bottom:30px;position:absolute}
 #ft img{margin-right:10px;width:20px}
 img.tmb{width:100px;height:75px;margin:0 10px 10px 10px}
@@ -72,13 +73,14 @@ div#texto p{color:inherit;font-size:13px;margin-bottom:5%}
 .jspPane{position:absolute}
 .jspPane p{margin-left:10px}
 .jspVerticalBar{background-image:url("images/bg_transparencia_0.4.png");height:100%;position:absolute;right:0;top:0;width:8px}
-#estilos .jspVerticalBar{right:50px}
+div#estilos h1{font-weight:normal}
+div#estilos .jspVerticalBar{right:50px}
 .jspHorizontalBar{background:#f00;bottom:0;height:16px;left:0;position:absolute;width:100%}
 .jspVerticalBar *,.jspHorizontalBar *{margin:0;padding:10}
 .jspCap{display:none}
 .jspHorizontalBar .jspCap{float:left}
-.jspTrack{background:url("css/images/bg_transparencia_0.4.png");position:relative}
-.jspDrag{-moz-border-radius:5px;-webkit-border-radius:5px;background:#3d3d35;border-radius:5px;border:1px solid #4d4d45;cursor:pointer;left:0;position:relative;top:0}
+.jspTrack{background:rgba(186,186,186,0.4);position:relative}
+.jspDrag{-moz-border-radius:5px;-webkit-border-radius:5px;background:#bababa;border-radius:5px;border:1px solid #4d4d45;cursor:pointer;left:0;position:relative;top:0}
 .jspHorizontalBar .jspTrack,.jspHorizontalBar .jspDrag{float:left;height:100%;width:6px}
 .jspArrow{background:#4d4d45;cursor:pointer;display:block;text-indent:-20000px}
 .jspArrow.jspDisabled{background:#80808d;cursor:default}
