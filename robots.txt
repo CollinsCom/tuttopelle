@@ -1,0 +1,4 @@
+# robots.txt
+User-agent: *
+Disallow: /pre/
+Sitemap: http://www.tuttopelle.com.mx

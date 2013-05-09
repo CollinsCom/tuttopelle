@@ -1,6 +1,4 @@
 <?php 
-
-
 //***************************************************
 //	Archivo de funciones para Tutto Pelle
 //***************************************************
@@ -33,7 +31,7 @@ function get_head($page,$titulo){
 		<script async type="text/javascript" src="js/jquery.jscrollpane.js"></script>
 		<script async type="text/javascript" src="js/jquery.mousewheel.js"></script>
 		<script async type="text/javascript" src="js/libs.js"></script>
-
+		<?php analyticstracking() ?>
 		 <!--[if IE]>
 			<script type="text/javascript">
 		   document.createElement("nav");

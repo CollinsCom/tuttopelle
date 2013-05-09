@@ -1,0 +1,11 @@
+#Tutto Pelle
+
+# Activar RewriteEngine
+Options +FollowSymlinks 
+RewriteEngine on
+
+# Redirect non-www urls to www
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+ErrorDocument 404 /404.php

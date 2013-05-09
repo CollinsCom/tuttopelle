@@ -6,23 +6,23 @@
     "type": "ftp",
 
     "save_before_upload": true,
-    "upload_on_save": false,
+    "upload_on_save": true,
     "sync_down_on_open": false,
     "sync_skip_deletes": false,
     "confirm_downloads": false,
     "confirm_sync": true,
     "confirm_overwrite_newer": false,
     
-    "host": "tuttopelle.com.mx",
-    "user": "pelle",
-    "password": "ftpTuttO09",
+    "host": "collinscom.com",
+    "user": "admllinscom",
+    "password": "ftp.CoLliC12",
     //"port": "22",
     
-    "remote_path": "/httpdocs/",
+    "remote_path": "/subdomains/sitios/httpdocs/tuttopelle/",
     "ignore_regexes": [
         "\\.sublime-(project|workspace)", "sftp-config(-alt\\d?)?\\.json",
         "sftp-settings\\.json", "/venv/", "\\.svn", "\\.hg", "\\.git", "\\.psd", "\\.ai",
-        "\\.bzr", "_darcs", "CVS", "\\.DS_Store", "Thumbs\\.db", "desktop\\.ini", "\\.styl", "pre"
+        "\\.bzr", "_darcs", "CVS", "\\.DS_Store", "Thumbs\\.db", "desktop\\.ini", "\\.styl", "conexion.php"
     ],
     //"file_permissions": "664",
     //"dir_permissions": "775",
