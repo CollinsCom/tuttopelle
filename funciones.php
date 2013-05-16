@@ -12,7 +12,7 @@ function get_head($page,$titulo){
 	<head>
 		<meta name="description" content="Tutto Pelle es la &uacute;nica cadena mexicana especialista en muebles tapizados en 100% piel genuina. Confort y alta calidad que marca tendencia.">
 		<meta name="author" content="CollinsCom">
-		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		
 		<title><?php echo $titulo; ?></title>
 
@@ -139,7 +139,22 @@ function get_footer(){
 				</div>
 			</footer>
 		</div>
-	<?php analyticstracking(); ?>
+
+	<?php	
+	$er = $_GET['error'];
+	if($er == '404'){
+	?>
+		<div id="404" style="display: none;background: #4d4d45;">
+			<img src="images/logo.png">
+			<h1 style="padding: 1em; text-align: center; text-transform: uppercase; font-weight: bold; font-size: 18px;">archivo no encontrado</h1>
+		</div>
+		<script>
+			no_encontrado();				
+		</script>
+	<?php 
+	}
+	analyticstracking(); 
+	?>
 	</body>
 </html>
 <?php
@@ -147,8 +162,12 @@ function get_footer(){
 
 function index(){
 ?>
-	<div id="fondo1" class="bg"><img src="css/images/bg1.jpg" alt=""></div>
-	<div id="fondo2" class="bg"><img src="css/images/bg1.jpg" alt=""></div>
+	<div id="fondo1"><img class="bg" src="css/images/bg1.jpg" alt=""></div>
+	<div id="fondo2"><img class="bg" src="css/images/bg1.jpg" alt=""></div>
+	<figure>
+		<img class="arrow reg" src="images/flechaG_reg.png" alt="Anterior">
+		<img class="arrow sig" src="images/flechaG_sig.png" alt="Siguiente">
+	</figure>
 	<div id="bg_sucursal" class="bg"></div>
 	<div id="bg_quienesSomos" class="bg"></div>
 <?php 
@@ -161,7 +180,7 @@ function coleccion(){
 	// $query = "SELECT estilo, categoria, modelo, composicion FROM modelos WHERE categoria = '".$cat."' AND mostrar = true GROUP BY estilo ORDER BY estilo ASC;";
 	$query = "SELECT * FROM modelos WHERE categoria = '".$cat."' AND mostrar = true GROUP BY modelo ORDER BY id_modelo ASC;";
 	$result = mysql_query($query,$link);
-	echo '<div id="estilos" cat="'.$cat.'">';
+	echo '<div id="estilos" cat="'.$cat.'" style="display:none;">';
 		echo '<h1>'.$cat.'</h1>';
 		echo '<div class="contenedor">';
 		while ($estilo = mysql_fetch_array($result)) {		
@@ -183,7 +202,19 @@ function coleccion(){
 	/** 
 	fin del div modelos
 	*/
-	echo "<script>	$('.contenedor').jScrollPane();	</script>";
+?>
+	<script>
+		$(document).ready(function(){
+			console.log("ready")
+			$("#estilos").fadeIn(500);
+			$('.contenedor').jScrollPane();
+			setInterval(function(){
+				console.log("setTimeOut")
+				$('.contenedor').jScrollPane();
+			},1000);
+		});
+	</script>
+<?php
 }
 
 function sucursal(){

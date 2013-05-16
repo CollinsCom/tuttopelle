@@ -4,6 +4,7 @@ get_head('Index','Tutto Pelle | 404');
 get_header();
 index();
 ?>
+<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
 <style>
 	.fancybox-inner{background: #4d4d45;}
 	#404 h1{padding: 1em; text-align: center; text-transform: uppercase; font-weight: bold; font-size: 18px;}

@@ -29,66 +29,87 @@ body
 a, h3
 	color inherit
 
-li not(.ui-state-disabled):hover
-	color color1
-
-li
-	cursor pointer
-	cursor hand
-	float left
-	margin auto
-	padding 5px
-
-li:after, li.quienesSomos:after
-	content " |"
-	display inline
-
-li:last-of-type:after
-	content ""
-
-li h3
-	cursor pointer
-	display inline
-
 #wrap
 	min-height 100%
 
+	.arrow
+		cursor pointer
+		top 50%
+		width 35px
+		position absolute
+
+	.reg
+		// @extend .arrow;
+		left 20px
+
+
+	.sig
+		// @extends .arrow;
+		right 20px
+
 header
 	height 100px
-	background url(images/deg_top.png) repeat-x 0px 0px
+	// background url(images/deg_top.png) repeat-x 0px 0px
 	-webkit-background-size auto 100%
 	-moz-background-size auto 100%
 	background-size auto 100%
 	z-index 9010
 
-nav
-	background url("images/bg_transparencia.png")
-	display none
-	// min-width 623px
-	position absolute
-	top 20px
-	z-index 100
-	// width 100%
+	nav
+		display none
+		position absolute
+		top 20px
+		width 100%	
+		z-index 100
+		
+		> ul 
+			> li:first-child
+				padding-left 50px
+		ul
+			height 20px
+			list-style-type none
+			margin 0px
+			padding 0px 5px 5px 0px
+			position relative
+			width 100%	 
 
-	ul
-		height 20px
-		list-style-type none
-		margin-left 50px
-		padding 0px 5px 5px 0px
-		position relative
-		width 600px
+			li:after
+				content " |"
+				display inline
+			
+			li
+				background url("images/bg_transparencia.png")
+				cursor pointer
+				cursor hand
+				float left
+				padding 5px
 
-		li ul
-			background url("images/bg_transparencia.png")
-			left 10px
-			margin-left 0px
-			position absolute !important
-			top 26px
-			width auto
+				h3
+					display: inline;
+			
+				ul
+					display none
+					margin-left 0px
+					position absolute !important
+					top 26px
+				
+				li 
+					ul
+						position absolute !important
+						top 26px
 
-			li ul
-				position absolute !important
-				top 25px
+			li:last-of-type:after
+				content ""
+
+			li:hover > ul
+				display block
+
+			li
+
+				h3:hover, a:hover 
+					color color2;
+
+
 
 #salas:first-letter, #sucursales:first-letter, .quienesSomos:first-letter
 	text-transform capitalize
@@ -180,6 +201,7 @@ p#mas
 	top 420px
 	left 45px
 	cursor hand
+	cursor pointer
 
 p#regresar
 	padding-left 30px

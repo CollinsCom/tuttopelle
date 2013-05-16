@@ -8,4 +8,12 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /?error=404
+
+#ExpiresActive On
+#ExpiresByType image/gif "access plus 6 months"
+#ExpiresByType image/jpeg "access plus 6 months"
+#ExpiresByType image/png "access plus 6 months"
+#ExpiresByType text/css "access plus 6 months"
+#ExpiresByType text/javascript "access plus 6 months"
+#ExpiresByType application/javascript "access plus 6 months"

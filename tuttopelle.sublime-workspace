@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"before",
+				"beforeClose"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"fad",
+				"fadeOut"
+			],
+			[
+				"fade",
+				"fadeIn"
+			],
+			[
+				"mouseo",
+				"mouseout"
+			],
+			[
+				"ready",
+				"ready	$(document).ready"
+			],
+			[
+				"re",
+				"ready	$(document).ready"
+			],
+			[
 				"inli",
 				"inline-block"
 			],
@@ -16,20 +44,12 @@
 				"inline-block"
 			],
 			[
-				"ready",
-				"ready	document.ready - $(function()"
-			],
-			[
 				"margin",
 				"margin-left"
 			],
 			[
 				"mar",
 				"marginW"
-			],
-			[
-				"re",
-				"return"
 			],
 			[
 				"w",
@@ -46,10 +66,6 @@
 			[
 				"na",
 				"nameFile"
-			],
-			[
-				"before",
-				"beforeLoad"
 			],
 			[
 				"background-",
@@ -114,10 +130,6 @@
 			[
 				"de",
 				"delay"
-			],
-			[
-				"fade",
-				"fadeOut"
 			],
 			[
 				"mode",
@@ -202,10 +214,6 @@
 			[
 				"mysql",
 				"mysql_connect"
-			],
-			[
-				"pad",
-				"padding-right"
 			],
 			[
 				"mysql_er",
@@ -383,23 +391,23 @@
 			"file": "funciones.php",
 			"settings":
 			{
-				"buffer_size": 9193,
+				"buffer_size": 10002,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/jquery.fancybox.css",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 4167,
+				"buffer_size": 129,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "contacto.php",
+			"file": ".htaccess",
 			"settings":
 			{
-				"buffer_size": 4739,
+				"buffer_size": 557,
 				"line_ending": "Unix"
 			}
 		},
@@ -407,23 +415,7 @@
 			"file": "js/libs.js",
 			"settings":
 			{
-				"buffer_size": 8584,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "estilos.php",
-			"settings":
-			{
-				"buffer_size": 2751,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/style.css",
-			"settings":
-			{
-				"buffer_size": 7393,
+				"buffer_size": 10748,
 				"line_ending": "Unix"
 			}
 		},
@@ -431,23 +423,15 @@
 			"file": "css/style.styl",
 			"settings":
 			{
-				"buffer_size": 7300,
+				"buffer_size": 7505,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/jquery-ui-1.10.1.custom.js",
+			"file": "coleccion.php",
 			"settings":
 			{
-				"buffer_size": 434342,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "conexion.php",
-			"settings":
-			{
-				"buffer_size": 790,
+				"buffer_size": 141,
 				"line_ending": "Unix"
 			}
 		},
@@ -455,7 +439,31 @@
 			"file": "js/jquery.fancybox.js",
 			"settings":
 			{
-				"buffer_size": 47754,
+				"buffer_size": 30854,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/images/bg1.jpg",
+			"settings":
+			{
+				"buffer_size": 1455635,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/jquery.mousewheel.js",
+			"settings":
+			{
+				"buffer_size": 2029,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 7564,
 				"line_ending": "Unix"
 			}
 		}
@@ -660,17 +668,39 @@
 	},
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/C:\\Users\\TV\\Desktop\\sublime_sftp_debug.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/tuttopelle.sublime-workspace",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/tuttopelle.sublime-project",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/modernizr.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.fancybox.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.jscrollpane.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery-ui-1.10.1.custom.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery-1.9.1.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/sftp-config.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/contacto.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/conexion.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/robots.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/jquery.fancybox.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/sitemap.xml",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/style.styl",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/estilos.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/C:\\Users\\TV\\Desktop\\sublime_sftp_debug.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/404.php",
+		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/SFTP/SFTP.sublime-settings",
+		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/SFTP/SFTP.py",
+		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/User/SFTP.sublime-settings",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/.htaccess",
+		"/Applications/XAMPP/xamppfiles/htdocs/zarkin/sftp-config.json",
+		"/var/folders/af/afPD07h4F44UPHZj8wPXg++++TI/-Tmp-/sublime-sftp-browse-1368139953/mapped/zarkin.com/.htaccess",
 		"/Applications/XAMPP/xamppfiles/htdocs/simtraveler/sftp-config.json",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/googleb0b6c8922dd69254.html",
 		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/User/SFTP.errors.log",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/validate.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.jscrollpane.js",
 		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/Git/Git.sublime-settings",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/README.md",
 		"/Users/TV/Library/Application Support/Sublime Text 2/Packages/SideBarGit/SideBarGit.sublime-settings",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.mousewheel.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.fancybox.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/jorgerojas.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/template/index.html",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/quienes-somos.php",
@@ -681,7 +711,6 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/template/css/main.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/images/bg_footer.png",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/jquery.jscrollpane.codrops1.css",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/style.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/simtraveler/js/jquery.mousewheel.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/simtraveler/js/lib.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/coleccion.php",
@@ -692,7 +721,6 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/pre/css/tPelleStyle.css",
 		"/Users/TV/Documents/datos y passwords.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/PIE.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery-1.9.1.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/ar-co/sftp-config.json"
 	],
 	"find":
@@ -766,6 +794,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"coleccion",
+			"modelos",
+			"re",
+			".categoria",
+			"coleccion",
+			"h3",
+			"imgResize",
+			"display:",
+			"display:none;",
+			"display:none;margin-left:0;",
+			"|",
+			"mouseover",
+			"cache",
+			"hover",
+			"@",
+			"file_per",
+			"close",
+			"afterclose",
+			"close",
+			"h1",
 			"hoverintent",
 			"click hoverintent",
 			"collins",
@@ -873,27 +921,7 @@
 			":hover",
 			"hover",
 			"bg_footer.png",
-			"30px",
-			" \n",
-			"cursor: hand;",
-			"nter;",
-			";\n",
-			"bg_footer.png",
-			"footer",
-			"footet",
-			".hid",
-			".show",
-			".hide",
-			".show",
-			"fondo",
-			"rgba(77, 77, 69, 0.7);",
-			"rgba",
-			"rgba(77,77,69,0.7)",
-			"tittle",
-			"alert",
-			"showLoading",
-			"loading",
-			"current"
+			"30px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1039,7 +1067,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1047,7 +1075,7 @@
 					"file": "funciones.php",
 					"settings":
 					{
-						"buffer_size": 9193,
+						"buffer_size": 10002,
 						"regions":
 						{
 							"bookmarks":
@@ -1057,24 +1085,12 @@
 								"regions":
 								[
 									[
-										3947,
-										3947
+										6776,
+										6776
 									],
 									[
-										4801,
-										4801
-									],
-									[
-										6191,
-										6191
-									],
-									[
-										8268,
-										8268
-									],
-									[
-										8749,
-										8749
+										7939,
+										7939
 									]
 								],
 								"scope": "bookmarks"
@@ -1083,8 +1099,8 @@
 						"selection":
 						[
 							[
-								5347,
-								5347
+								8167,
+								8167
 							]
 						],
 						"settings":
@@ -1096,38 +1112,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2411.0,
+						"translation.y": 3250.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "css/jquery.fancybox.css",
+					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 4167,
+						"buffer_size": 129,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-									[
-										459,
-										459
-									]
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								459,
-								459
+								125,
+								125
 							]
 						],
 						"settings":
@@ -1135,7 +1138,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1146,18 +1149,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "contacto.php",
+					"file": ".htaccess",
 					"settings":
 					{
-						"buffer_size": 4739,
+						"buffer_size": 557,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4552,
-								4552
+								99,
+								99
 							]
 						],
 						"settings":
@@ -1165,8 +1168,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1179,7 +1181,7 @@
 					"file": "js/libs.js",
 					"settings":
 					{
-						"buffer_size": 8584,
+						"buffer_size": 10748,
 						"regions":
 						{
 							"bookmarks":
@@ -1189,16 +1191,8 @@
 								"regions":
 								[
 									[
-										1165,
-										1165
-									],
-									[
-										3688,
-										3688
-									],
-									[
-										5100,
-										5100
+										5343,
+										5343
 									]
 								],
 								"scope": "bookmarks"
@@ -1207,8 +1201,8 @@
 						"selection":
 						[
 							[
-								6495,
-								6495
+								4778,
+								4787
 							]
 						],
 						"settings":
@@ -1221,85 +1215,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4220.0,
+						"translation.y": 2902.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "estilos.php",
-					"settings":
-					{
-						"buffer_size": 2751,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1479,
-								1479
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 162.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "css/style.css",
-					"settings":
-					{
-						"buffer_size": 7393,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6423,
-								6423
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1290.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "css/style.styl",
 					"settings":
 					{
-						"buffer_size": 7300,
+						"buffer_size": 7505,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
 						},
 						"selection":
 						[
 							[
-								574,
-								579
+								1511,
+								1511
 							]
 						],
 						"settings":
@@ -1308,11 +1251,97 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"tab_size": 2,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 264.0,
+						"translation.y": 1060.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "coleccion.php",
+					"settings":
+					{
+						"buffer_size": 141,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/jquery.fancybox.js",
+					"settings":
+					{
+						"buffer_size": 30854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3911,
+								3911
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "css/images/bg1.jpg",
+					"settings":
+					{
+						"buffer_size": 1455635,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1320,7 +1349,7 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1328,7 +1357,7 @@
 					"file": "funciones.php",
 					"settings":
 					{
-						"buffer_size": 9193,
+						"buffer_size": 10002,
 						"regions":
 						{
 							"bookmarks":
@@ -1344,8 +1373,8 @@
 						"selection":
 						[
 							[
-								7148,
-								7148
+								6599,
+								6599
 							]
 						],
 						"settings":
@@ -1357,97 +1386,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4202.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "js/jquery-ui-1.10.1.custom.js",
-					"settings":
-					{
-						"buffer_size": 434342,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								433374,
-								433374
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 282327.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "conexion.php",
-					"settings":
-					{
-						"buffer_size": 790,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								388,
-								229
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "contacto.php",
-					"settings":
-					{
-						"buffer_size": 4739,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4240,
-								4240
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 595.0,
+						"translation.y": 3019.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1457,15 +1396,28 @@
 					"file": "js/libs.js",
 					"settings":
 					{
-						"buffer_size": 8584,
+						"buffer_size": 10748,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										690,
+										690
+									]
+								],
+								"scope": "bookmarks"
+							}
 						},
 						"selection":
 						[
 							[
-								7203,
-								7203
+								690,
+								690
 							]
 						],
 						"settings":
@@ -1478,25 +1430,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4878.0,
+						"translation.y": 799.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "js/jquery.fancybox.js",
+					"buffer": 8,
+					"file": "js/jquery.mousewheel.js",
 					"settings":
 					{
-						"buffer_size": 47754,
+						"buffer_size": 2029,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1635,
-								1654
+								2029,
+								2029
 							]
 						],
 						"settings":
@@ -1505,10 +1457,40 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 1429.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "css/style.css",
+					"settings":
+					{
+						"buffer_size": 7564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								655
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1234.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1549,7 +1531,7 @@
 		"rows":
 		[
 			0.0,
-			0.597485826804,
+			0.885360009578,
 			1.0
 		]
 	},
@@ -1564,7 +1546,7 @@
 	},
 	"output.sftp":
 	{
-		"height": 108.0
+		"height": 256.0
 	},
 	"output.unsaved_changes":
 	{
@@ -1834,7 +1816,7 @@
 		[
 			[
 				"",
-				"/Applications/XAMPP/xamppfiles/htdocs/hanson/hanson.sublime-project"
+				"/Applications/XAMPP/xamppfiles/htdocs/galerias/galerias.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1843,6 +1825,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 180.0,
+	"side_bar_width": 341.0,
 	"status_bar_visible": true
 }

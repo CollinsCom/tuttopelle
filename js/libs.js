@@ -1,16 +1,29 @@
+var fadeTime = 2500;
+var currentItem = 1;
+var nextItem = 2;
 $(document).ready(function() {
-	imgResize(".bg");
+
+	imgResize(".bg", '16:9');
+
 	$('nav').delay(500).fadeIn(1000);
 	$('a#logo').delay(1000).animate({
 		height: '200px'
 	}, 500, function() {});
 
-	$("nav ul").accordion({
-		event: "click hoverintent",
-		heightStyle: "content",
-		collapsible: true,
-		active: false
-	});
+	// $('li').hover(function(){
+	// 	$('li:hover > ul').fadeIn(500).mouseout(function(){
+	// 		$(this).fadeOut(500);
+	// 	});
+	// });
+	// $("ul").accordion({
+ //    event: "click hoverintent",
+	// 	heightStyle: "content",
+	// 	collapsible: true,
+	// 	active: false
+	// });
+	// $("nav").hover(function(){
+		// $("nav ul").accordion("option", "active", -1);
+	// });
 
 //fancybox-------------------------------------------------------------------------------//
 	$("a.coleccion").fancybox({
@@ -33,7 +46,14 @@ $(document).ready(function() {
 		  }, // helpers
 		beforeLoad: function() {
 			$("#bg_quienesSomos").fadeOut(1000);
+		},
+		beforeClose: function(){
+			$("#estilos").hide();
+			console.log('#estilo hidden')
 		}
+	});
+	$("a.coleccion").click(function() {
+		console.log('click a.coleccion')
 	});
 
 	$("a.sucursal").fancybox({
@@ -135,10 +155,8 @@ $(document).ready(function() {
 		$("#bg_quienesSomos").fadeOut(1000);
 		// $("#fondo1").fadeIn(1000);
 		// $("#fondo2").fadeIn(1000);
-	});
-
-	
-	//fancyBox End----------------------------------------------------------------------------//
+	});	
+//fancyBox End----------------------------------------------------------------------------//
 	
 	$("div#estilos article").click(function() {
 		$("#estilos").fadeOut(500);
@@ -193,28 +211,30 @@ $(document).ready(function() {
 		var t = document.documentElement.clientWidth;
 		var newSize = t*fontOriginalSize/windowOriginalWidth;
 		el = document.getElementById('texto');
-		el.style.fontSize = newSize;
+		el.style.fontSize = newize;
 	}
+
+
 //rotacion del fondo
 	var InfiniteRotator = {
 		init: function() {
 			//initial fade-in time (in milliseconds)
 			var initialFadeIn = 1000;
 			//interval between items (in milliseconds)
-			var itemInterval = 5000;
+			var itemInterval = 10000;
 			//cross-fade time (in milliseconds)
-			var fadeTime = 2500;
+			fadeTime = 2500;
 			//count number of items
 			var numberOfItems = $('.bg_img').length;
 			//set current item
-			var currentItem = 1;
-			var nextItem = 2;
+			currentItem = 1;
+			nextItem = 2;
 			//show first item
 			$('.bg_img').eq(currentItem).fadeIn(initialFadeIn);
 			//loop through the items
 			var infiniteLoop = setInterval(function() {
-					$('#fondo2 img').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime);
-					$('#fondo1 img').attr('src', 'css/images/bg' + nextItem + '.jpg');
+					$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime);
+					$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
 					currentItem = nextItem;
 					if (nextItem == 5) {
 						nextItem = 1;
@@ -224,25 +244,87 @@ $(document).ready(function() {
 			}, itemInterval);
 		}
 	};
-	InfiniteRotator.init();	
-});
+	InfiniteRotator.init();
+	//end de rotacion del fondo
+
+	//flechas
+	$('.arrow').on('click',function(){		var direccion = $(this).attr('alt');
+		if(direccion == 'Siguiente'){
+			siguienteBG();
+		}else if(direccion == 'Anterior'){
+			anteriorBG();
+		}
+	});	//end arrow
+
+});// end Document.ready
+
+function siguienteBG(){
+	$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime/2);
+	$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
+	currentItem = nextItem;
+	if (nextItem == 5) {
+		nextItem = 1;
+	} else {
+		nextItem++;
+	}
+}
+function anteriorBG(){
+	// nextItem = currentItem;
+	if (currentItem == 1) {
+		nextItem = 5;
+	} else {
+		nextItem = currentItem-1;
+	}
+	$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime/2);
+	$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
+	currentItem = nextItem;
+	if (nextItem = 5) {
+		nextItem = 1;
+	} else {
+		nextItem++;
+	}
+}
+
+//ERROR 404
+function no_encontrado() {
+	$.fancybox(['#404'], {
+		closeClick: true,
+		openEffect: 'fade',
+		closeEffect: 'fade',
+		top: 160,
+		beforeLoad:{
+			// window.history.replaceState({error: "404"},"error","error=404");
+		},
+		beforeClose: {
+			// window.history.replaceState({page: 1}, "index", "index.php");
+		},
+		helpers : { 
+	 		overlay: {
+	  		css: {'background': 'none'}
+	 		} // overlay 
+		} // helpers			
+	});
+}//end error 404
 
 
 //cambiar tamaño de fondo dependiento dlel tamaño de la pantalla
-function imgResize(selector){
- var winW = $(window).width();	
+function imgResize(selector, aspc){
+	if(aspc == ""){aspc = '16:9'}
+	aspc.replace(" ","");
+	aspc = aspc.split(":");
+	var winW = $(window).width();	
 	var winH = $(window).height();	
 	var marginH = 0;	
 	var marginW = 0;	
-	var x = winW/16;	
+	var x = winW/aspc[0];
 
-	if((9*x) < winH){		
+	if((aspc[1]*x) < winH){		
 		h = winH;		
-		w = (winH/9)*16;		
+		w = (winH/aspc[1])*aspc[0];		
 		marginW=(w-winW)/2;				
 	}else{		
 		w = winW;		
-		h = (winW/16)*9;		
+		h = (winW/aspc[0])*aspc[1];		
 		marginH=(h-winH)/2;				
 	}
 	$(selector).css({
@@ -254,10 +336,16 @@ function imgResize(selector){
 	});
 }
 
-$(window).resize(function(){imgResize(".bg");});
+$(window).resize(function(){imgResize(".bg", '16:9');});
+//end cambiar tamaño
 
-// hoverintent
-$.event.special.hoverintent = {
+// hoverintent 
+  /*
+   * hoverIntent | Copyright 2011 Brian Cherne
+   * http://cherne.net/brian/resources/jquery.hoverIntent.html
+   * modified by the jQuery UI team
+   */
+  $.event.special.hoverintent = {
     setup: function() {
       $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
     },

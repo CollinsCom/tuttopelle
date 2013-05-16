@@ -1,14 +1,7 @@
 {
-	"folders":
-	[
-		{
-			"path": "/Applications/XAMPP/xamppfiles/htdocs/tuttopelle"
-		},
-		{
-			"path": "/Applications/XAMPP/xamppfiles/htdocs/tuttopelle_resp"
-		},
-		{
-			"path": "/Volumes/JR 16GB"
-		}
-	]
+ "folders": [
+  {
+   "path": "/Applications/XAMPP/xamppfiles/htdocs/tuttopelle"
+  }
+ ]
 }
