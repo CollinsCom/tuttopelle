@@ -103,7 +103,7 @@ function get_header(){
 				</ul>
 			</li>
 			<li>
-				<h3>QUIENES SOMOS </h3>
+				<h3>QUIÉNES SOMOS </h3>
 				<ul>
 					<?php  
 						$query = "SELECT seccion, imgFondo, cssInfo FROM quienesSomos ORDER BY id ASC;";
@@ -120,7 +120,7 @@ function get_header(){
 			</li>
 			<!-- <li class="ui-state-disabled"><h3>SERVICIOS </h3></li> -->
 			<li><a id="contacto" class="contacto fancybox.iframe" data-fancybox-type="iframe" href="contacto.php" title="">CONTACTO </a></li>			
-			<li><h3><a id="especiales" href="data:image/jpg;base64,<?php echo base64_encode(file_get_contents("images/especiales/april.jpg")); ?>">ESPECIALES </a></h3></li>
+			<li><h3><a id="especiales" href="javascript:;">ESPECIALES </a></h3></li>
 		</ul>
 	</nav>
 	<a id="logo" href="index.php"><img id="logo-t" src="data:image/jpg;base64,<?php echo base64_encode(file_get_contents("images/logo.png")); ?>" alt="Tutto Pelle"></a>
@@ -131,7 +131,7 @@ function get_header(){
 function get_footer(){
 ?>
 			<footer>
-				<!-- <a href="http://www.collinscom.com" target="collins" style="position: absolute;right: 20px;bottom: 10px;">collinscom.com</a> -->
+				<a href="http://www.collinscom.com" target="collins" style="position: absolute;right: 20px;bottom: 10px;">collinscom.com</a>
 				<div>
 					<a href="https://www.facebook.com/TuttoPelleMx" target="facebook"><img src="images/fb.png" alt="facebook"></a>
 					<a href="https://twitter.com/tuttopellemx" target="twitter"><img src="images/tw.png" alt="twitter"></a>
@@ -184,7 +184,7 @@ function coleccion(){
 		echo '<h1>'.$cat.'</h1>';
 		echo '<div class="contenedor">';
 		while ($estilo = mysql_fetch_array($result)) {		
-			echo '<article est="'.$estilo[estilo].'">';
+			echo '<article est="'.$estilo[estilo].'" mod="'.$estilo[modelo].'">';
 				if($estilo[composicion] == "modulares"){
 					echo '<img src="images/colecciones/tmb/tmb_'.$estilo[composicion].$estilo[modelo].'.jpg" alt="'.$estilo[composicion].'">';
 				}else{					
@@ -198,20 +198,26 @@ function coleccion(){
 	/** 
 	fin del div estilos
 	*/
-	echo '<div id="modelos" style="display:none;"></div>'; 
+	echo '<div id="modelos" style="display:block;"></div>'; 
 	/** 
 	fin del div modelos
 	*/
 ?>
 	<script>
 		$(document).ready(function(){
-			console.log("ready")
-			$("#estilos").fadeIn(500);
-			$('.contenedor').jScrollPane();
-			setInterval(function(){
-				console.log("setTimeOut")
-				$('.contenedor').jScrollPane();
-			},1000);
+			$("#modelos").fadeOut(500, function(){
+				$("#estilos").fadeIn(500);
+				$('.contenedor').fadeIn(500).jScrollPane();
+			});
+
+			// $("#estilos").fadeIn(500, function(){
+			// 	$('.contenedor').fadeIn(500).jScrollPane();				
+			// });
+
+			// setInterval(function(){
+			// 	console.log("setTimeOut: antes del '$('.contenedor').fadeIn(500).jScrollPane()'")
+			// 	$('.contenedor').jScrollPane();
+			// },5000);
 		});
 	</script>
 <?php
@@ -234,7 +240,8 @@ function sucursal(){
 			<span>Teléfono(s): <?php echo $sucursal[vcTels]; ?></span>
 		</p>
 	</div>
-	<img src="data:image/png;base64,<?php echo base64_encode(file_get_contents("images/sucursales/".$sucursal[vcMapa])); ?>" alt="">
+	<img src="data:image/png;base64,<?php echo base64_encode(file_get_contents("images/sucursales/".$sucursal[vcMapa])); ?>" alt="mapa tienda tutto pelle <?php echo $sucursal[vcNSucursal]; ?>" id="map">
+	<img src="images/sucursales/<?php echo  $sucursal[vcPImg]?>" alt="fachata tienda tutto pelle <?php echo $sucursal[vcNSucursal]; ?>" id="fachada">
 </div>
 
 <?php 

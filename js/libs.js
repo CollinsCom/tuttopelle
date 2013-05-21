@@ -49,11 +49,11 @@ $(document).ready(function() {
 		},
 		beforeClose: function(){
 			$("#estilos").hide();
-			console.log('#estilo hidden')
+			// console.log('#estilo hidden')
 		}
 	});
 	$("a.coleccion").click(function() {
-		console.log('click a.coleccion')
+		// console.log('click a.coleccion')
 	});
 
 	$("a.sucursal").fancybox({
@@ -75,7 +75,7 @@ $(document).ready(function() {
 	});
 	$("a.sucursal").click(function() {
 		var bgImg = $(this).attr("id");
-		$("#bg_sucursal").css("background-image", "url(images/sucursales/" + bgImg + ")");
+		$("#bg_sucursal").css("background-image", "url(css/images/bg_sucursales.jpg)");
 		$("#bg_sucursal").fadeIn(1000);
 		$("#bg_quienesSomos").fadeOut(1000);
 	});
@@ -161,11 +161,12 @@ $(document).ready(function() {
 	$("div#estilos article").click(function() {
 		$("#estilos").fadeOut(500);
 		$('<div id="fancybox-loading" style="position:absolute; top:50%; left:50%"><div></div></div>').appendTo('body');
+		var modelo = $(this).attr('mod');
 		var estilo = $(this).attr('est');
 		var categoria = $("div#estilos").attr('cat');
 		$.ajax({
 			url:'estilos.php',
-			data: 'categoria='+categoria+'&estilo='+estilo,
+			data: 'categoria='+categoria+'&estilo='+estilo+'&modelo='+modelo,
 			cache:false,
 			method:'get',
 			dataType:'html',

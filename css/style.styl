@@ -232,7 +232,10 @@ div#vinetas
 	hgroup h2.estilo, div#estilos article div h2
 		font-size 12px
 		text-transform uppercase
-
+	
+	div#estilos article
+		cursor pointer
+		cursor hand
 	img
 		margin 0 auto
 
@@ -372,7 +375,7 @@ ul
 	outline none !important
 
 div#sucursal
-	background url(css/images/bg_transparencia_0.7.png)
+	// background url(css/images/bg_transparencia_0.7.png)
 	position absolute
 	height 350px
 	width 950px
@@ -380,8 +383,8 @@ div#sucursal
 	div
 		position relative
 		width 320px
-		height 250px
-		top 60px
+		height 150px
+		top 0px
 		left 30px
 		overflow hidden
 
@@ -396,18 +399,25 @@ div#sucursal
 		p
 			top 100px
 			left 40px
-			font-size 14px
+			font-size 12px
 
 			span
 				display block
 				margin-bottom 0.5em
 
-	img
+	img#map
+		width 340px
+		height auto
+		position absolute
+		top 130px
+		left 30px
+
+	img#fachada
 		width 500px
 		height auto
 		position absolute
-		top 15px
-		left 380px
+		top 30px
+		left 400px
 
 div#texto
 	background url(images/bg_transparencia.png)

@@ -11,9 +11,26 @@ RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 ErrorDocument 404 /?error=404
 
 #ExpiresActive On
-#ExpiresByType image/gif "access plus 6 months"
-#ExpiresByType image/jpeg "access plus 6 months"
-#ExpiresByType image/png "access plus 6 months"
-#ExpiresByType text/css "access plus 6 months"
-#ExpiresByType text/javascript "access plus 6 months"
-#ExpiresByType application/javascript "access plus 6 months"
+#ExpiresByType image/gif "access plus 2 months"
+#ExpiresByType image/jpeg "access plus 2 months"
+#ExpiresByType image/png "access plus 2 months"
+#ExpiresByType text/css "access plus 2 months"
+#ExpiresByType text/javascript "access plus 2 months"
+#ExpiresByType application/javascript "access plus 2 months"
+
+# 1 YEAR
+<FilesMatch "\.(ico|pdf|flv)$">
+Header set Cache-Control "max-age=29030400, public"
+</FilesMatch>
+# 1 WEEK
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch "\.(xml|txt)$">
+Header set Cache-Control "max-age=172800, proxy-revalidate"
+</FilesMatch>
+# 1 MIN
+#<FilesMatch "\.(html|htm|php|css|js)$">
+#Header set Cache-Control "max-age=60, private, proxy-revalidate"
+#</FilesMatch>

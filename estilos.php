@@ -4,9 +4,9 @@ echo '<script type="text/javascript" src="js/jquery.jscrollpane.js"></script>';
 echo '<script type="text/javascript" src="js/libs.js"></script>';
 echo '<script type="text/javascript" src="js/jquery.mousewheel.js"></script>';
 echo '<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="screen" />';
+$mod = $_GET[modelo];
 $cat = $_GET[categoria];
 $est = $_GET[estilo];
-
 $n_modelo;
 $nombreArch;
 $nombreArch1;
@@ -16,7 +16,7 @@ $query = "SELECT modelo, composicion, txtDescription FROM modelos WHERE estilo =
 $modelos = mysql_query($query,$link);
 echo '<div id="thumb" rel="'.$cat.'">';
 echo '<div class="contenedor" style="height: 410px; width: 125px;">';
-$first = true;
+// $first = true;
 while ($modelo = mysql_fetch_array($modelos)) {					
 	if($modelo[composicion] == "modulares"){
 		$catT= $modelo[composicion];
@@ -25,7 +25,7 @@ while ($modelo = mysql_fetch_array($modelos)) {
 	}
 	$nombreArch = $catT.$modelo[modelo];
 	// if($mod == $modelo[modelo])
-	if($first){
+	if($modelo[modelo] == $mod){
 		$n_modelo = $modelo[modelo];
 		$description = $modelo[txtDescription];
 		$nombreArch1 = $nombreArch;
