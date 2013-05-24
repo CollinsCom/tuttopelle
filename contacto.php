@@ -14,27 +14,40 @@ while($csr = mysql_fetch_object ($qrs)){
 	$infoArt = 'Modelo que solicita:<br><input name="theArticle" type="text" size="30" value="'.utf8_encode($csr->vcMLinea).' | '.$csr->vcMNombre.'"><br><br>';
 }
 
-$theName=$_POST['theName'];
-$theCity=$_POST['theCity'];
-$thePhone=$_POST['thePhone'];
-$theMail=$_POST['theMail'];
-$theComment=$_POST['theComment'];
-$theArticle=$_POST['theArticle'];
-
+$theName    = $_POST['theName'];
+$theCity    = $_POST['theCity'];
+$thePhone   = $_POST['thePhone'];
+$theMail    = $_POST['theMail'];
+$theComment = $_POST['theComment'];
+$theArticle = $_POST['theArticle'];
+$mails=array(
+	"sandra.delrio@zarkin.com", 
+	"alberto.garibai@zarkin.com", 
+	"jorge.rojas@collinscom.com"
+	);
 
 if ( $_POST['sendMail'] == 'Enviar' ){
 	
 	$query = "INSERT INTO contactos VALUES ( null , '$theName', '$theCity', '$thePhone', '$theMail', '$theArticle', '$theComment', null)";
 	$qrs = mysql_query($query,$link);
 
-	// mail ("contacto@collinscom.com", "Contacto Tutto Pelle", "From: $theMail");
-	mail ("jorge.rojas@collinscom.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
-	mail ("sandra.delrio@zarkin.com.mx", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
-	mail ("alberto.garibai@zarkin.com.mx", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
+	for ($i=0; $i < count($mails); $i++) {
+		// $destino = $mails[$i];
+		mail ("$mails[$i]", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
+	}
+	
 	mail ("contacto@collinscom.com", "Contacto Tutto Pelle", "", "From: $theMail");
+	
+	// mail ("sandra.delrio@zarkin.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
+	// mail ("alberto.garibai@zarkin.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");	
 
-	//	mail ("hugo@collinscom.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
 	echo "<script>parent.$.fancybox.close()</script>";
+}else{
+	echo "<script> console.log('El correo se enviara a:');";
+	for ($i=0; $i < count($mails); $i++) { 
+		echo " console.log('	".$mails[$i]."');";
+	}
+	echo "</script>";
 }
 
 ?>

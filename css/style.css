@@ -65,13 +65,13 @@ ul{border:none}
 .ui-menu .ui-menu-item a{text-decoration:none;display:block;padding:0;border:none}
 .ui-menu .ui-menu-item a.ui-state-hover,.ui-menu .ui-menu-item a.ui-state-active{margin:0;border:none}
 .ui-slider a{outline:none !important}
-div#sucursal{position:absolute;height:350px;width:950px;}
-div#sucursal div{position:relative;width:320px;height:150px;top:0;left:30px;overflow:hidden;}
-div#sucursal div h1{top:60px;left:40px;width:100%;margin-bottom:10px;font-size:22px;text-transform:uppercase}
-div#sucursal div p{top:100px;left:40px;font-size:12px;}
+div#sucursal{background:url("images/bg_transparencia_0.7.png");position:absolute;height:350px;width:950px;}
+div#sucursal div{position:relative;width:380px;height:360px;top:0;overflow:hidden;}
+div#sucursal div h1{font-size:22px;font-weight:normal;left:40px;margin:0 0 5px 30px;text-transform:uppercase;top:60px;width:100%}
+div#sucursal div p{top:100px;left:40px;font-size:14px;margin-left:30px;}
 div#sucursal div p span{display:block;margin-bottom:.5em}
-div#sucursal img#map{width:340px;height:auto;position:absolute;top:130px;left:30px}
-div#sucursal img#fachada{width:500px;height:auto;position:absolute;top:30px;left:400px}
+div#sucursal div img#map{width:100%;position:absolute}
+div#sucursal img#fachada{width:520px;height:auto;position:absolute;top:15px;left:400px}
 div#texto{background:url("images/bg_transparencia.png");overflow:hidden;padding:15px;position:absolute;}
 div#texto h1{color:inherit;font-size:20px;margin-bottom:5%}
 div#texto p{color:inherit;font-size:13px;margin-bottom:5%}

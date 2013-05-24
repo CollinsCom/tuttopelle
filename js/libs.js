@@ -1,6 +1,8 @@
-var fadeTime = 2500;
+var fadeTime    = 2500;
 var currentItem = 1;
-var nextItem = 2;
+var nextItem    = 2;
+var fondos = 3;
+
 $(document).ready(function() {
 
 	imgResize(".bg", '16:9');
@@ -57,14 +59,8 @@ $(document).ready(function() {
 	});
 
 	$("a.sucursal").fancybox({
-		maxWidth: "80%",
-		minWidth: 900,
-		maxHeight: "80%",
-		minHeight: 350,
-		fitToView: true,
 		width: 950,
-		height: 300,
-		autoSize: false,
+		minHeight: 380,
 		closeClick: true,
 		openEffect: 'fade',
 		closeEffect: 'fade',
@@ -215,7 +211,6 @@ $(document).ready(function() {
 		el.style.fontSize = newize;
 	}
 
-
 //rotacion del fondo
 	var InfiniteRotator = {
 		init: function() {
@@ -236,8 +231,9 @@ $(document).ready(function() {
 			var infiniteLoop = setInterval(function() {
 					$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime);
 					$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
+					console.log("fondo actual: "+nextItem)
 					currentItem = nextItem;
-					if (nextItem == 5) {
+					if (nextItem == fondos) {
 						nextItem = 1;
 					} else {
 						nextItem++;
@@ -258,12 +254,12 @@ $(document).ready(function() {
 	});	//end arrow
 
 });// end Document.ready
-
 function siguienteBG(){
 	$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime/2);
 	$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
+	console.log("fondo actual: "+nextItem)
 	currentItem = nextItem;
-	if (nextItem == 5) {
+	if (nextItem == fondos) {
 		nextItem = 1;
 	} else {
 		nextItem++;
@@ -272,14 +268,15 @@ function siguienteBG(){
 function anteriorBG(){
 	// nextItem = currentItem;
 	if (currentItem == 1) {
-		nextItem = 5;
+		nextItem = fondos;
 	} else {
 		nextItem = currentItem-1;
 	}
 	$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime/2);
 	$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
+	console.log("fondo actual: "+nextItem)
 	currentItem = nextItem;
-	if (nextItem = 5) {
+	if (nextItem = fondos) {
 		nextItem = 1;
 	} else {
 		nextItem++;

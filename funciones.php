@@ -231,7 +231,7 @@ function sucursal(){
 	$query = "SELECT vcNSucursal, vcDireccion, vcTels, vcNCiudad, vcPImg, vcMapa, vcNEstado FROM sucursales WHERE vcPImg = '".$nom."';";
 	$sucursal = mysql_fetch_array(mysql_query($query,$link));	
 	?>
-<div id="sucursal" style="background: url(css/images/bg_transparencia_0.6.png);">
+<div id="sucursal">
 	<div>
 		<h1><?php echo $sucursal[vcNSucursal]; ?></h1>
 		<p>
@@ -239,8 +239,8 @@ function sucursal(){
 			<span><?php echo $sucursal[vcNCiudad].", ".$sucursal[vcNEstado]; ?></span>
 			<span>Teléfono(s): <?php echo $sucursal[vcTels]; ?></span>
 		</p>
+		<img src="data:image/png;base64,<?php echo base64_encode(file_get_contents("images/sucursales/".$sucursal[vcMapa])); ?>" alt="mapa tienda tutto pelle <?php echo $sucursal[vcNSucursal]; ?>" id="map">
 	</div>
-	<img src="data:image/png;base64,<?php echo base64_encode(file_get_contents("images/sucursales/".$sucursal[vcMapa])); ?>" alt="mapa tienda tutto pelle <?php echo $sucursal[vcNSucursal]; ?>" id="map">
 	<img src="images/sucursales/<?php echo  $sucursal[vcPImg]?>" alt="fachata tienda tutto pelle <?php echo $sucursal[vcNSucursal]; ?>" id="fachada">
 </div>
 
