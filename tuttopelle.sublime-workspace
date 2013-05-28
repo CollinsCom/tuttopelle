@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"img",
+				"imgBgs"
+			],
+			[
 				"print",
 				"print_r"
 			],
@@ -110,10 +114,6 @@
 			[
 				"show",
 				"showLoading"
-			],
-			[
-				"img",
-				"img	img"
 			],
 			[
 				"he",
@@ -392,10 +392,13 @@
 	"buffers":
 	[
 		{
+			"contents": "<?php \n//***************************************************\n//	Archivo de funciones para Tutto Pelle\n//***************************************************\n\ninclude_once('conexion.php');\n\nfunction get_head($page,$titulo){\n ?>\n<!doctype html>\n<html lang=\"es\">\n	<head>\n		<meta name=\"description\" content=\"Tutto Pelle es la &uacute;nica cadena mexicana especialista en muebles tapizados en 100% piel genuina. Confort y alta calidad que marca tendencia.\">\n		<meta name=\"author\" content=\"CollinsCom\">\n		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n		\n		<title><?php echo $titulo; ?></title>\n\n		<link rel=\"stylesheet\" href=\"css/reset.css\" type=\"text/css\" media=\"screen\" />\n		<link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\" media=\"screen\" />\n		<link rel=\"stylesheet\" href=\"css/jquery.fancybox.css?v=2.1.4\" type=\"text/css\" media=\"screen\" />\n		<link rel=\"stylesheet\" href=\"css/jquery-ui.css\" type=\"text/css\" media=\"screen\" />\n		<link rel=\"shortcut icon\" href=\"images/favicon.ico\" />\n		<link rel=\"stylesheet\" href=\"css/jquery-ui.css\" type=\"text/css\" media=\"screen\" />\n\n		<!--<script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-1.9.1.min.js\"></script>-->\n		<script type=\"text/javascript\" src=\"js/jquery-1.9.1.js\"></script>\n		<script type=\"text/javascript\" src=\"js/jquery-ui-1.10.1.custom.js\"></script>\n		<script async type=\"text/javascript\" src=\"js/jquery.fancybox.js?v=2.1.4\"></script>\n		<script async type=\"text/javascript\" src=\"js/modernizr.js\"></script>\n		<script async type=\"text/javascript\" src=\"js/jquery.jscrollpane.js\"></script>\n		<script async type=\"text/javascript\" src=\"js/jquery.mousewheel.js\"></script>\n		<script async type=\"text/javascript\" src=\"js/libs.js\"></script>\n		<?php analyticstracking() ?>\n		 <!--[if IE]>\n			<script type=\"text/javascript\">\n		   document.createElement(\"nav\");\n		   document.createElement(\"header\");\n		   document.createElement(\"footer\");\n		   document.createElement(\"section\");\n		   document.createElement(\"article\");\n		   document.createElement(\"aside\");\n		   document.createElement(\"hgroup\");\n\n		   var e = (\"abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video\").split(',');\n				for (var i = 0; i < e.length; i++) {\n					document.createElement(e[i]);\n					}\n			</script>\n		<![endif]-->\n\n	</head>\n	<body>\n		<div id=\"wrap\">\n<?php\n}\n\nfunction get_header(){\n?>\n<header>\n	<nav>\n		<ul>\n			<li id=\"coleccion\">\n				<h3>COLECCIÓN </h3>\n				<ul style=\"text-transform: capitalize;\">\n				<?php\n					$link = conectar();\n					/** \n					Muestra el submenu categorias\n					*/\n					$query = \"SELECT categoria FROM modelos WHERE mostrar = true GROUP BY categoria ORDER BY id_modelo ASC;\";\n					$categorias = mysql_query($query,$link);\n					while($categoria = mysql_fetch_array($categorias)){\n						echo '<li class=\"'.$categoria[categoria].'\">';\n							echo '<a class=\"coleccion fancybox.iframe\" data-fancybox-type=\"iframe\" href=\"coleccion.php?categoria='.$categoria[categoria].'\">';\n								echo '<h3>'.$categoria[categoria].'</h3>';\n							echo '</a>';									\n	 				} \n		 		?>\n				</ul>\n			</li>\n			<li id=\"sucursales\">\n				<h3>SUCURSALES </h3>\n				<ul>\n					<?php \n					$query = \"SELECT vcNCiudad, vcNEstado, vcTMenu FROM sucursales GROUP BY vcNEstado ORDER BY vcNCiudad ASC;\";\n					$ciudades = mysql_query($query,$link);\n					while($ciudad = mysql_fetch_array($ciudades)){\n						echo '<li>';\n								echo '<h3>'.$ciudad[vcTMenu].'</h3>';\n								echo \"<ul>\";\n									$query = \"SELECT vcNSucursal, vcPImg FROM sucursales WHERE vcNEstado = '\".$ciudad[vcNEstado].\"' GROUP BY vcNSucursal ORDER BY vcNSucursal ASC;\";						\n									$sucursales = mysql_query($query,$link);									\n									while ($sucursal = mysql_fetch_array($sucursales)) {\n										echo \"<li>\";\n											echo '<a class=\"sucursal fancybox.iframe\" id=\"'.$sucursal[vcPImg].'\" data-fancybox-type=\"iframe\" href=\"sucursal.php?nombre='.$sucursal[vcPImg].'\" title=\"\">'.$sucursal[vcNSucursal].'</a>';										\n										echo \"</li>\";\n									}\n								echo \"</ul>\";\n							echo \"</li>\";\n					}\n					?>\n				</ul>\n			</li>\n			<li>\n				<h3>QUIÉNES SOMOS </h3>\n				<ul>\n					<?php  \n						$query = \"SELECT seccion, imgFondo, cssInfo FROM quienesSomos ORDER BY id ASC;\";\n						$secciones = mysql_query($query,$link);\n						while($seccion = mysql_fetch_array($secciones)){\n							list($w, $h) = explode(\",\",$seccion[cssInfo]);\n							echo '<li>';\n								echo '<a id=\"'.$seccion[seccion].'\" class=\"quienesSomos fancybox.iframe\" data-fancybox-type=\"iframe\" bg=\"'.$seccion[imgFondo].'\" w=\"'.$w.'\" h=\"'.$h.'\" href=\"quienes-somos.php?seccion='.$seccion[seccion].'\" title=\"\">'.$seccion[seccion].'</a>';										\n								// echo $seccion[seccion];\n							echo '</li>';\n						}\n					?>\n				</ul>\n			</li>\n			<!-- <li class=\"ui-state-disabled\"><h3>SERVICIOS </h3></li> -->\n			<li><a id=\"contacto\" class=\"contacto fancybox.iframe\" data-fancybox-type=\"iframe\" href=\"contacto.php\" title=\"\">CONTACTO </a></li>			\n			<li><h3><a id=\"especiales\" href=\"javascript:;\">ESPECIALES </a></h3></li>\n		</ul>\n	</nav>\n	<a id=\"logo\" href=\"index.php\"><img id=\"logo-t\" src=\"data:image/jpg;base64,<?php echo base64_encode(file_get_contents(\"images/logo.png\")); ?>\" alt=\"Tutto Pelle\"></a>\n</header>\n<?php \n}\n\nfunction get_footer(){\n?>\n			<footer>\n				<a href=\"http://www.collinscom.com\" target=\"collins\" style=\"position: absolute;right: 20px;bottom: 10px;\">collinscom.com</a>\n				<div>\n					<a href=\"https://www.facebook.com/TuttoPelleMx\" target=\"facebook\"><img src=\"images/fb.png\" alt=\"facebook\"></a>\n					<a href=\"https://twitter.com/tuttopellemx\" target=\"twitter\"><img src=\"images/tw.png\" alt=\"twitter\"></a>\n					<p>DERECHOS RESERVDOS 2013 Tutto Pelle / ESPECIALISTAS EN MUEBLES DE PIEL / AVISO DE PRIVACIDAD</p>\n				</div>\n			</footer>\n		</div>\n\n	<?php	\n	$er = $_GET['error'];\n	if($er == '404'){\n	?>\n		<div id=\"404\" style=\"display: none;background: #4d4d45;\">\n			<img src=\"images/logo.png\">\n			<h1 style=\"padding: 1em; text-align: center; text-transform: uppercase; font-weight: bold; font-size: 18px;\">archivo no encontrado</h1>\n		</div>\n		<script>\n			no_encontrado();				\n		</script>\n	<?php \n	}\n	analyticstracking(); \n	?>\n	</body>\n</html>\n<?php\n}\n\nfunction index(){\n?>\n	<div id=\"fondo1\"><img class=\"bg\" src=\"css/images/bg1.jpg\" alt=\"\"></div>\n	<div id=\"fondo2\"><img class=\"bg\" src=\"css/images/bg1.jpg\" alt=\"\"></div>\n	<figure class=\"arrows\">\n		<img class=\"arrow reg\" src=\"images/flechaG_reg.png\" alt=\"Anterior\">\n		<img class=\"arrow sig\" src=\"images/flechaG_sig.png\" alt=\"Siguiente\">\n	</figure>\n\n	\n	<div id=\"bg_sucursal\" class=\"bg\"></div>\n	<div id=\"bg_quienesSomos\" class=\"bg\"></div>\n<?php \n}\n\nfunction coleccion(){\n	$cat = $_GET[categoria];\n	// $est = $_GET[estilo];\n	$link = conectar();\n	// $query = \"SELECT estilo, categoria, modelo, composicion FROM modelos WHERE categoria = '\".$cat.\"' AND mostrar = true GROUP BY estilo ORDER BY estilo ASC;\";\n	$query = \"SELECT * FROM modelos WHERE categoria = '\".$cat.\"' AND mostrar = true GROUP BY modelo ORDER BY id_modelo ASC;\";\n	$result = mysql_query($query,$link);\n	echo '<div id=\"estilos\" cat=\"'.$cat.'\" style=\"display:none;\">';\n		echo '<h1>'.$cat.'</h1>';\n		echo '<div class=\"contenedor\">';\n		while ($estilo = mysql_fetch_array($result)) {		\n			echo '<article est=\"'.$estilo[estilo].'\" mod=\"'.$estilo[modelo].'\">';\n				if($estilo[composicion] == \"modulares\"){\n					echo '<img src=\"images/colecciones/tmb/tmb_'.$estilo[composicion].$estilo[modelo].'.jpg\" alt=\"'.$estilo[composicion].'\">';\n				}else{					\n					echo '<img src=\"images/colecciones/tmb/tmb_'.$estilo[categoria].$estilo[modelo].'.jpg\" alt=\"'.$estilo[categoria].'\">';\n				}\n				echo '<h2>'.$estilo[modelo].'</h2>';\n			echo '</article>';\n		}\n		echo \"</div>\";\n	echo '</div>'; \n	/** \n	fin del div estilos\n	*/\n	echo '<div id=\"modelos\" style=\"display:block;\"></div>'; \n	/** \n	fin del div modelos\n	*/\n?>\n	<script>\n		$(document).ready(function(){\n			$(\"#modelos\").fadeOut(500, function(){\n				$(\"#estilos\").fadeIn(500);\n				$('.contenedor').fadeIn(500).jScrollPane();\n			});\n\n			// $(\"#estilos\").fadeIn(500, function(){\n			// 	$('.contenedor').fadeIn(500).jScrollPane();				\n			// });\n\n			// setInterval(function(){\n			// 	console.log(\"setTimeOut: antes del '$('.contenedor').fadeIn(500).jScrollPane()'\")\n			// 	$('.contenedor').jScrollPane();\n			// },5000);\n		});\n	</script>\n<?php\n}\n\nfunction sucursal(){\n	// echo \"<style>body{background-color: black;background:url(../images/sucursales/sucDFAltavista.jpg) no-repeat 0% 0%;}</style>\";\n\n	$nom = $_GET[nombre];\n	$link = conectar();\n	$query = \"SELECT vcNSucursal, vcDireccion, vcTels, vcNCiudad, vcPImg, vcMapa, vcNEstado FROM sucursales WHERE vcPImg = '\".$nom.\"';\";\n	$sucursal = mysql_fetch_array(mysql_query($query,$link));	\n	?>\n<div id=\"sucursal\">\n	<div>\n		<h1><?php echo $sucursal[vcNSucursal]; ?></h1>\n		<p>\n			<span><?php echo $sucursal[vcDireccion]; ?></span>\n			<span><?php echo $sucursal[vcNCiudad].\", \".$sucursal[vcNEstado]; ?></span>\n			<span>Teléfono(s): <?php echo $sucursal[vcTels]; ?></span>\n		</p>\n		<img src=\"data:image/png;base64,<?php echo base64_encode(file_get_contents(\"images/sucursales/\".$sucursal[vcMapa])); ?>\" alt=\"mapa tienda tutto pelle <?php echo $sucursal[vcNSucursal]; ?>\" id=\"map\">\n	</div>\n	<img src=\"images/sucursales/<?php echo  $sucursal[vcPImg]?>\" alt=\"fachata tienda tutto pelle <?php echo $sucursal[vcNSucursal]; ?>\" id=\"fachada\">\n</div>\n\n<?php \n}\n\nfunction quienesSomos(){\n	$link = conectar();\n	$query = \"SELECT * FROM quienesSomos WHERE seccion = '\".$_GET[seccion].\"' ORDER BY id ASC;\";\n	$reslt = mysql_query($query,$link);\n	$seccion = mysql_fetch_array($reslt);\n	list($w, $h) = explode(\",\",$seccion[cssInfo]);\n\n	echo '<div id=\"texto\" bg=\"'.$seccion[imgFondo].'\" style=\"width:'.($w-20).'px; height:'.($h-20).'px;\" ><h1>'.$seccion[titulo].'</h1>'.$seccion[contenido].'</div>';\n\n}\n\nfunction analyticstracking(){\n?>\n	<script>\n	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n	  ga('create', 'UA-40742823-1', 'tuttopelle.com.mx');\n	  ga('send', 'pageview');\n	</script>\n<?php\n}\n?>\n\n",
 			"file": "funciones.php",
+			"file_size": 10309,
+			"file_write_time": 1369433235000000,
 			"settings":
 			{
-				"buffer_size": 10306,
+				"buffer_size": 10324,
 				"line_ending": "Unix"
 			}
 		},
@@ -403,7 +406,7 @@
 			"file": "js/libs.js",
 			"settings":
 			{
-				"buffer_size": 10696,
+				"buffer_size": 10400,
 				"line_ending": "Unix"
 			}
 		},
@@ -411,7 +414,7 @@
 			"file": "css/style.styl",
 			"settings":
 			{
-				"buffer_size": 7714,
+				"buffer_size": 7710,
 				"line_ending": "Unix"
 			}
 		},
@@ -435,7 +438,7 @@
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 7657,
+				"buffer_size": 7707,
 				"line_ending": "Unix"
 			}
 		},
@@ -443,7 +446,7 @@
 			"file": "contacto.php",
 			"settings":
 			{
-				"buffer_size": 5244,
+				"buffer_size": 5332,
 				"line_ending": "Unix"
 			}
 		},
@@ -656,6 +659,8 @@
 	},
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/sftp-config.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/C:\\Users\\TV\\Desktop\\sublime_sftp_debug.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/sucursal.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/images/flechaG_reg.png",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.mousewheel.js",
@@ -663,14 +668,12 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/.htaccess",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/index.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/css/images/bg1.jpg",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/C:\\Users\\TV\\Desktop\\sublime_sftp_debug.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/tuttopelle.sublime-workspace",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/tuttopelle.sublime-project",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/modernizr.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery.jscrollpane.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery-ui-1.10.1.custom.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/js/jquery-1.9.1.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/sftp-config.json",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/contacto.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/conexion.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/tuttopelle/robots.txt",
@@ -785,6 +788,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"arrow",
+			"fadeout",
+			"fadein",
+			"class=\"bg\"",
+			"fondo",
+			"array",
+			"index",
 			"#sucursal",
 			"#sucursales",
 			"div#sucursal",
@@ -905,14 +915,7 @@
 			"bg_footer.png",
 			"index",
 			"bg_footer.png",
-			"bg",
-			"bg_footer",
-			"bg_",
-			"footer",
-			"texto",
-			"bg_footer.png",
-			"novedades",
-			"li"
+			"bg"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1058,7 +1061,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1066,7 +1069,7 @@
 					"file": "funciones.php",
 					"settings":
 					{
-						"buffer_size": 10306,
+						"buffer_size": 10324,
 						"regions":
 						{
 							"bookmarks":
@@ -1076,12 +1079,12 @@
 								"regions":
 								[
 									[
-										6679,
-										6679
+										6697,
+										6697
 									],
 									[
-										7869,
-										7869
+										7887,
+										7887
 									]
 								],
 								"scope": "bookmarks"
@@ -1090,8 +1093,8 @@
 						"selection":
 						[
 							[
-								8552,
-								8552
+								6578,
+								6578
 							]
 						],
 						"settings":
@@ -1103,7 +1106,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3814.0,
+						"translation.y": 2740.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1113,7 +1116,7 @@
 					"file": "js/libs.js",
 					"settings":
 					{
-						"buffer_size": 10696,
+						"buffer_size": 10400,
 						"regions":
 						{
 							"bookmarks":
@@ -1123,8 +1126,8 @@
 								"regions":
 								[
 									[
-										5291,
-										5291
+										5314,
+										5314
 									]
 								],
 								"scope": "bookmarks"
@@ -1133,8 +1136,8 @@
 						"selection":
 						[
 							[
-								1403,
-								1403
+								1426,
+								1426
 							]
 						],
 						"settings":
@@ -1157,7 +1160,7 @@
 					"file": "css/style.styl",
 					"settings":
 					{
-						"buffer_size": 7714,
+						"buffer_size": 7710,
 						"regions":
 						{
 							"bookmarks":
@@ -1173,8 +1176,8 @@
 						"selection":
 						[
 							[
-								6112,
-								6112
+								762,
+								762
 							]
 						],
 						"settings":
@@ -1186,7 +1189,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6870.0,
+						"translation.y": 531.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1253,7 +1256,7 @@
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1261,7 +1264,7 @@
 					"file": "funciones.php",
 					"settings":
 					{
-						"buffer_size": 10306,
+						"buffer_size": 10324,
 						"regions":
 						{
 							"bookmarks":
@@ -1290,7 +1293,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 60.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1300,7 +1303,7 @@
 					"file": "js/libs.js",
 					"settings":
 					{
-						"buffer_size": 10696,
+						"buffer_size": 10400,
 						"regions":
 						{
 							"bookmarks":
@@ -1310,8 +1313,12 @@
 								"regions":
 								[
 									[
-										690,
-										690
+										713,
+										713
+									],
+									[
+										5884,
+										5884
 									]
 								],
 								"scope": "bookmarks"
@@ -1320,8 +1327,8 @@
 						"selection":
 						[
 							[
-								1490,
-								1490
+								6860,
+								6860
 							]
 						],
 						"settings":
@@ -1334,7 +1341,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1031.0,
+						"translation.y": 4145.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1344,7 +1351,7 @@
 					"file": "css/style.css",
 					"settings":
 					{
-						"buffer_size": 7657,
+						"buffer_size": 7707,
 						"regions":
 						{
 						},
@@ -1373,15 +1380,15 @@
 					"file": "contacto.php",
 					"settings":
 					{
-						"buffer_size": 5244,
+						"buffer_size": 5332,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								849,
-								856
+								1584,
+								1584
 							]
 						],
 						"settings":
@@ -1393,7 +1400,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 394.0,
+						"translation.y": 485.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1410,8 +1417,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								155,
+								155
 							]
 						],
 						"settings":
@@ -1423,7 +1430,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 11.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1464,7 +1471,7 @@
 		"rows":
 		[
 			0.0,
-			0.314902047105,
+			0.406592839081,
 			1.0
 		]
 	},

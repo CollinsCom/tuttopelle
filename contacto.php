@@ -31,16 +31,18 @@ if ( $_POST['sendMail'] == 'Enviar' ){
 	$query = "INSERT INTO contactos VALUES ( null , '$theName', '$theCity', '$thePhone', '$theMail', '$theArticle', '$theComment', null)";
 	$qrs = mysql_query($query,$link);
 
+	echo "</script>";
 	for ($i=0; $i < count($mails); $i++) {
 		// $destino = $mails[$i];
 		mail ("$mails[$i]", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
+		echo "console.log('se envio a: $mails[$i]');";
 	}
+	echo "</script>";
 	
-	mail ("contacto@collinscom.com", "Contacto Tutto Pelle", "", "From: $theMail");
+	// mail ("contacto@collinscom.com", "Contacto Tutto Pelle", "", "From: $theMail");
 	
 	// mail ("sandra.delrio@zarkin.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
-	// mail ("alberto.garibai@zarkin.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");	
-
+	// mail ("alberto.garibai@zarkin.com", "Contacto Tutto Pelle", "Nombre: $theName\n\nCiudad: $theCity\n\nTeléfono: $thePhone\n\neMail: $theMail\n\nModelo que solicita: $theArticle\n\nComentarios: $theComment", "From: $theMail");
 	echo "<script>parent.$.fancybox.close()</script>";
 }else{
 	echo "<script> console.log('El correo se enviara a:');";

@@ -37,15 +37,16 @@ a, h3
 		top 50%
 		width 35px
 		position absolute
+		opacity 0.5
 
 	.reg
-		// @extend .arrow;
+		@extend #wrap .arrow;
 		left 20px
-
-
 	.sig
-		// @extends .arrow;
+		@extend #wrap .arrow;
 		right 20px
+	.reg:hover, .sig:hover
+		opacity 1.0
 
 header
 	height 100px
@@ -375,7 +376,8 @@ ul
 	outline none !important
 
 div#sucursal
-	background url(images/bg_transparencia_0.7.png)
+	background url(
+		images/bg_transparencia_0.7.png)
 	position absolute
 	height 350px
 	width 950px

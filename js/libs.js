@@ -1,7 +1,14 @@
-var fadeTime    = 2500;
+var fadeTime    = 4000;
 var currentItem = 1;
 var nextItem    = 2;
-var fondos = 3;
+// var fondos = 5;
+var imgBgs = new Array(
+		"bg1.jpg",
+		"bg2.jpg",
+		"bg3.jpg",
+		"bg4.jpg",
+		"bg5.jpg"
+		);
 
 $(document).ready(function() {
 
@@ -223,64 +230,48 @@ $(document).ready(function() {
 			//count number of items
 			var numberOfItems = $('.bg_img').length;
 			//set current item
-			currentItem = 1;
-			nextItem = 2;
+			currentItem = 0;
+			nextItem = 1;
 			//show first item
 			$('.bg_img').eq(currentItem).fadeIn(initialFadeIn);
 			//loop through the items
 			var infiniteLoop = setInterval(function() {
-					$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime);
-					$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
-					console.log("fondo actual: "+nextItem)
-					currentItem = nextItem;
-					if (nextItem == fondos) {
-						nextItem = 1;
-					} else {
-						nextItem++;
-					}
+					siguienteBG(fadeTime);
 			}, itemInterval);
 		}
 	};
 	InfiniteRotator.init();
 	//end de rotacion del fondo
-
 	//flechas
-	$('.arrow').on('click',function(){		var direccion = $(this).attr('alt');
+	$('.arrow').on('click',function(){		
+		var direccion = $(this).attr('alt');
 		if(direccion == 'Siguiente'){
-			siguienteBG();
+			siguienteBG(fadeTime);
 		}else if(direccion == 'Anterior'){
-			anteriorBG();
+			anteriorBG(fadeTime);
 		}
 	});	//end arrow
-
 });// end Document.ready
-function siguienteBG(){
-	$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime/2);
-	$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
+
+function siguienteBG(time){
+	$('#fondo2 img.bg').attr('src', 'css/images/' + imgBgs[currentItem]).show().fadeOut(time);
+	$('#fondo1 img.bg').attr('src', 'css/images/' + imgBgs[nextItem]);
 	console.log("fondo actual: "+nextItem)
 	currentItem = nextItem;
-	if (nextItem == fondos) {
-		nextItem = 1;
+	if (nextItem >= (imgBgs.length-1)) {
+		nextItem = 0;
 	} else {
 		nextItem++;
 	}
 }
-function anteriorBG(){
+function anteriorBG(time){
 	// nextItem = currentItem;
-	if (currentItem == 1) {
-		nextItem = fondos;
+	if (currentItem <= 0) {
+		nextItem = imgBgs.length;
 	} else {
 		nextItem = currentItem-1;
 	}
-	$('#fondo2 img.bg').attr('src', 'css/images/bg' + currentItem + '.jpg').show().fadeOut(fadeTime/2);
-	$('#fondo1 img.bg').attr('src', 'css/images/bg' + nextItem + '.jpg');
-	console.log("fondo actual: "+nextItem)
-	currentItem = nextItem;
-	if (nextItem = fondos) {
-		nextItem = 1;
-	} else {
-		nextItem++;
-	}
+	siguienteBG(time);
 }
 
 //ERROR 404

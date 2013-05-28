@@ -4,9 +4,10 @@ body form#fContacto input{display:block}
 body form#fContacto input[type="submit"],body form#fContacto input[type="reset"]{display:inline-block}
 a,h3{color:inherit}
 #wrap{min-height:100%;}
-#wrap .arrow{cursor:pointer;top:50%;width:35px;position:absolute}
+#wrap .arrow,#wrap .reg,#wrap .sig{cursor:pointer;top:50%;width:35px;position:absolute;opacity:.5}
 #wrap .reg{left:20px}
 #wrap .sig{right:20px}
+#wrap .reg:hover,#wrap .sig:hover{opacity:1}
 header{height:100px;-webkit-background-size:auto 100%;-moz-background-size:auto 100%;background-size:auto 100%;z-index:9010;}
 header nav{display:none;position:absolute;top:20px;width:100%;z-index:100;}
 header nav > ul > li:first-child{padding-left:50px}

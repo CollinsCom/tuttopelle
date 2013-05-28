@@ -164,10 +164,12 @@ function index(){
 ?>
 	<div id="fondo1"><img class="bg" src="css/images/bg1.jpg" alt=""></div>
 	<div id="fondo2"><img class="bg" src="css/images/bg1.jpg" alt=""></div>
-	<figure>
-		<img class="arrow reg" src="images/flechaG_reg.png" alt="Anterior">
-		<img class="arrow sig" src="images/flechaG_sig.png" alt="Siguiente">
+	<figure class="arrows">
+		<img class="reg" src="images/flechaG_reg.png" alt="Anterior">
+		<img class="sig" src="images/flechaG_sig.png" alt="Siguiente">
 	</figure>
+
+	
 	<div id="bg_sucursal" class="bg"></div>
 	<div id="bg_quienesSomos" class="bg"></div>
 <?php 
